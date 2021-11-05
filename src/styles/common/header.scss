@@ -55,13 +55,26 @@
     column-gap: 20px;
 
     &__link {
+        position: relative;
         width: 50px;
         height: 50px;
 
-        &:hover {
-            border-radius: 50px; /*1*/
+        &:hover::before {
+            position: absolute;
+            content: "";
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border-radius: 100%; /*1*/
             border: 1px solid transparent; /*2*/
-            background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%) border-box; /*3*/
+            background: linear-gradient(
+                    93.17deg,
+                    #1fa2ff 0.68%,
+                    #12d8fa 51.27%,
+                    #a6ffcb 98.79%
+                )
+                border-box; /*3*/
             -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
                 linear-gradient(#fff 0 0);
             -webkit-mask-composite: destination-out; /*5'*/

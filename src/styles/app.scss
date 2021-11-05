@@ -101,6 +101,10 @@ select {
 	border-radius: 100%;
 }
 
+.pt-100 {
+	padding-top: 100px;
+}
+
 @import "./common/header.scss";
 @import "./pages/index.scss";
 @import "./pages/main.scss";
