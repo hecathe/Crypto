@@ -1,0 +1,14 @@
+extends ../template
+
+block variables
+    - var title = 'Карта сайта'
+
+block content
+    main
+        section.site-map.mb-90
+            .container
+                h1 Карта сайта
+                table.site-map__table
+                    tr.site-map__row
+                        td.site-map__cell
+                            a.site-map__link(href="main.html") Главная
