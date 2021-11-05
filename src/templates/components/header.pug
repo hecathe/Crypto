@@ -1,1 +1,35 @@
-header
+header.header
+    .container
+        nav.header__nav
+            a.header__logo(href="#")
+                img(src="assets/images/svg/logo.svg" alt="Логотип")
+            ul.header__list.site-nav
+                li.site-nav__item
+                    a.site-nav__link(href="#") Каталог
+                li.site-nav__item
+                    a.site-nav__link(href="#") О компании
+                li.site-nav__item
+                    a.site-nav__link(href="#") Новости
+                li.site-nav__item
+                    a.site-nav__link(href="#") Услуги
+                li.site-nav__item
+                    a.site-nav__link(href="#") FAQ
+                li.site-nav__item
+                    a.site-nav__link(href="#") Отзывы
+                li.site-nav__item
+                    a.site-nav__link(href="#") Производители
+                li.site-nav__item
+                    a.site-nav__link(href="#") Контакты
+            ul.header__list.user-nav
+                li.user-nav__item
+                    form.search(action="#")
+                        label.user-nav__link.btn.btn-circle
+                            input(type="search")
+                li.user-nav__item
+                    a.user-nav__link.btn.btn-circle(href="#")
+                        svg(width="20" height="20")
+                            use(xlink:href="assets/images/sprite.svg#user-outlined")
+                li.user-nav__item
+                    a.user-nav__link.btn.btn-circle(href="#")
+                        svg(width="20" height="20")
+                            use(xlink:href="assets/images/sprite.svg#cart")

@@ -9,6 +9,9 @@ $content-padding: 0 16px;
 // Шрифт
 $font-primary: sans-serif;
 
+//Цвета
+$color-white: #FFFFFF;
+
 @import "./common/fonts.scss";
 @import "./common/normalize";
 @import "./common/mixins.scss";
@@ -31,9 +34,9 @@ button {
 }
 
 body {
-	font-family: "Manrope", sans-serif;
-	font-size: 14px;
-	line-height: 140%;
+	font-family: "Montserrat", sans-serif;
+	// font-size: 14px;
+	// line-height: 140%;
 }
 
 img {
@@ -86,8 +89,21 @@ select {
 	overflow: hidden;
 }
 
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include button-reset;
+}
+
+.btn-circle {
+	border: 1px solid $color-white;
+	border-radius: 100%;
+}
+
 @import "./common/header.scss";
 @import "./pages/index.scss";
+@import "./pages/main.scss";
 @import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {
