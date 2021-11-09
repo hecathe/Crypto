@@ -90,10 +90,18 @@ select {
 }
 
 .btn {
+	width: max-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	@include button-reset;
+}
+
+.btn-gradient {
+	color: $color-white;
+	background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+	border-radius: 50px;
+	padding: 15px 40px;
 }
 
 .btn-circle {
@@ -107,6 +115,7 @@ select {
 
 @import "./common/header.scss";
 @import "./pages/index.scss";
+@import "./pages/temporary.scss";
 @import "./pages/main.scss";
 @import "./common/footer.scss";
 

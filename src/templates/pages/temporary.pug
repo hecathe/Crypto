@@ -1,0 +1,26 @@
+extends ../template
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main
+        section.temporary.pt-100
+            .container
+                .temporary__wrap
+                    h1.temporary__title Скоро откроемся
+                    a.temporary__btn.btn.btn-gradient(href="#" download)
+                        svg(width="20" height="20")
+                            use(xlink:href="assets/images/sprite.svg#pdf")
+                        span Скачать прайс
+
+                    .temporary__block
+                        h2.temporary__subtitle Получать рассылку
+                        p.temporary__text Главные новости и события майнинг сферы в одном письме самым удобным способом. Никакого спама, только по делу.
+
+                        form.temporary__form(action="#")
+                            label.temporary__label
+                                input.temporary__input(type="email" placeholder="Введите ваш email")
+                            button.temporary__btn.btn.btn-gradient(type="submit") Подписаться
+                        p Нажимая на кнопку Подписаться, вы соглашаетесь с 
+                            a(href="#") условиями обработки персональных данных
