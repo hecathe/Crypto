@@ -35,3 +35,7 @@ if (tabIdList) {
 		}
 	}
 }
+
+svg4everybody({
+	polyfill: true
+});

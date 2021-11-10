@@ -10,6 +10,8 @@ $content-padding: 0 16px;
 $font-primary: sans-serif;
 
 //Цвета
+$color-dark-grey: #333333;
+$color-grey: #949494;
 $color-white: #FFFFFF;
 
 @import "./common/fonts.scss";
@@ -89,19 +91,71 @@ select {
 	overflow: hidden;
 }
 
+.title-first {
+	font-size: 50px;
+	line-height: 61px;
+	color: $color-white;
+	margin: 0;
+}
+
+.title-second {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 44px;
+	color: $color-dark-grey;
+	margin: 0;
+}
+
 .btn {
 	width: max-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	column-gap: 10px;
 	@include button-reset;
 }
 
 .btn-gradient {
+	position: relative;
 	color: $color-white;
-	background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
-	border-radius: 50px;
 	padding: 15px 40px;
+	border-radius: 50px;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		height: 100%;
+		transition: width 250ms ease-in-out;
+		z-index: 1;
+	}
+
+	* {
+		position: relative;
+		z-index: 2; /*текст в кнопке надо оборачивать тегом*/
+	}
+
+	&::before {
+		width: 100%;
+		left: 0;
+		background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+	}
+
+	&::after {
+		right: 0;
+		width: 0;
+		background: linear-gradient(93.17deg, #A6FFCB 0.68%, #12D8FA 51.27%, #1FA2FF 98.79%);
+	}
+	
+	&:hover {
+		&::before {
+			width: 0;
+		}
+		&::after {
+			width: 100%;
+		}
+	}
 }
 
 .btn-circle {
@@ -113,20 +167,19 @@ select {
 	padding-top: 100px;
 }
 
+@media screen and (max-width: 767.98px) {
+	.title-second {
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
+
+// components
 @import "./common/header.scss";
+@import "./common/footer.scss";
+@import "./common/form-mailing.scss";
+
+//pages
 @import "./pages/index.scss";
 @import "./pages/temporary.scss";
 @import "./pages/main.scss";
-@import "./common/footer.scss";
-
-// @media screen and (max-width: 1274px) {
-
-// }
-
-// @media screen and (max-width: 960px) {
-
-// }
-
-// @media screen and (max-width: 768px) {
-
-// }
