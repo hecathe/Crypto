@@ -1,0 +1,24 @@
+.site-map {
+    height: 100vh;
+    color: $color-white;
+    background: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4F00C7 14.16%, #2E018E 43.42%, #150264 68.53%, #07024A 88.2%, #010241 100%);
+
+    &__table {
+        border-collapse: collapse;
+    }
+
+    &__cell {
+        border: 1px solid $color-white;
+    }
+
+    &__link {
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        padding: 20px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
