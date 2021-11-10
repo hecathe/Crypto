@@ -5,7 +5,11 @@ block variables
 
 block content
     main
+        // класс pt-100 добавляется каждой первой секции на странице (потому что хэдэр абсолютный)
         section.temporary.pt-100
+            .big-icon
+                svg(width="660" height="912")
+                    use(xlink:href="assets/images/sprite.svg#mining-block")
             .container
                 .temporary__wrap
                     h1.temporary__title Скоро откроемся
@@ -14,13 +18,14 @@ block content
                             use(xlink:href="assets/images/sprite.svg#pdf")
                         span Скачать прайс
 
-                    .temporary__block
-                        h2.temporary__subtitle Получать рассылку
-                        p.temporary__text Главные новости и события майнинг сферы в одном письме самым удобным способом. Никакого спама, только по делу.
+                    .temporary__block.form-mailing
+                        h2.form-mailing__title.title-second Получать рассылку
+                        p.form-mailing__text Главные новости и события майнинг сферы в одном письме самым удобным способом. Никакого спама, только по делу.
 
-                        form.temporary__form(action="#")
-                            label.temporary__label
-                                input.temporary__input(type="email" placeholder="Введите ваш email")
-                            button.temporary__btn.btn.btn-gradient(type="submit") Подписаться
-                        p Нажимая на кнопку Подписаться, вы соглашаетесь с 
+                        form.form-mailing__form(action="#")
+                            label.form-mailing__label
+                                input.form-mailing__input(type="email" placeholder="Введите ваш email")
+                            button.form-mailing__btn.btn.btn-gradient(type="submit") 
+                                span Подписаться
+                        p.form-mailing__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
                             a(href="#") условиями обработки персональных данных

@@ -1,6 +1,105 @@
 .temporary {
+    height: 100%;
+    background-image: url('../images/temporary-back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     .container {
+        position: relative;
         display: flex;
         justify-content: flex-end;
+        padding-top: 110px;
+        padding-bottom: 68px;
+        z-index: 2;
+    }
+
+    &__wrap {
+        max-width: 790px;
+        color: $color-white;
+    }
+
+    &__title {
+        font-size: 80px;
+        line-height: 98px;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    &__block {
+        background: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4F00C7 14.16%, #2E018E 43.42%, #150264 68.53%, #07024A 88.2%, #010241 100%);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        margin-top: 110px;
+        padding: 30px 40px 40px;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+}
+
+.big-icon {
+    position: fixed;
+    top: 58%;
+    left: -460px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+@media screen and (max-width: 767.98px) {
+    .temporary {
+        background-image: url('../images/temporary-back-mobile.jpg');
+
+        .container {
+            justify-content: center;
+        }
+
+        &__title {
+            font-size: 50px;
+            line-height: 61px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+
+        &__block {
+            margin: 0 -20px;
+            margin-top: 100px;
+            padding: 30px 20px 28px;
+        }
+    }
+
+    .big-icon {
+        position: absolute;
+        width: 150px;
+        height: 207px;
+        left: initial;
+        right: 0;
+        top: 10%;
+        transform: none;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 359.98px) {
+    .temporary {
+        &__block {
+            margin: 0 -14px;
+            margin-top: 100px;
+        }
     }
 }
