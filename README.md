@@ -1,4 +1,4 @@
-# Демо https://uxdimon.github.io/vasyan/map.html
+# Демо https://hecathe.github.io/crypto/
 
 ## Использование
 
@@ -27,6 +27,8 @@ gulp up-lb
 ```
 
 ## Используемые библиотеки
+
+https://github.com/jonathantneal/svg4everybody
 
 https://imask.js.org
 
