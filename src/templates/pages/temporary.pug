@@ -8,7 +8,7 @@ block content
         // класс pt-100 добавляется каждой первой секции на странице (потому что хэдэр абсолютный)
         section.temporary.pt-100
             .big-icon
-                svg(width="660" height="912")
+                svg(width="651" height="900")
                     use(xlink:href="assets/images/sprite.svg#mining-block")
             .container
                 .temporary__wrap
@@ -22,10 +22,11 @@ block content
                         h2.form-mailing__title.title-second Получать рассылку
                         p.form-mailing__text Главные новости и события майнинг сферы в одном письме самым удобным способом. Никакого спама, только по делу.
 
-                        form.form-mailing__form(action="#")
+                        form.form-mailing__form(action="#" data-form="mailing")
                             label.form-mailing__label
                                 input.form-mailing__input(type="email" placeholder="Введите ваш email")
                             button.form-mailing__btn.btn.btn-gradient(type="submit") 
                                 span Подписаться
+                            .form-mailing__response
                         p.form-mailing__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
                             a(href="#") условиями обработки персональных данных
