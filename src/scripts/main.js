@@ -76,6 +76,12 @@ emailField.addEventListener('input', function() {
 	}
 })
 
+emailField.addEventListener('blur', function() {
+	if (emailField.value === '') {
+		submitButton.classList.remove('disabled')
+	}
+})
+
 mailingForm.addEventListener('submit', function(event) {
 	if (emailField.parentElement.classList.contains('error') || emailValue == '') {
 		event.preventDefault()
