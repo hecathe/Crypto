@@ -79,7 +79,7 @@
                     border-box; /*3*/
                 -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
                     linear-gradient(#fff 0 0);
-                -webkit-mask-composite: destination-out; /*5'*/
+                -webkit-mask-composite: source-out; /*5'*/
                 mask-composite: exclude; /*5*/
                 // border-image: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
                 transition: background 250ms;

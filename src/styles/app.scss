@@ -10,6 +10,7 @@ $content-padding: 0 16px;
 $font-primary: sans-serif;
 
 //Цвета
+$color-main: #180269;
 $color-dark-grey: #333333;
 $color-grey: #949494;
 $color-white: #FFFFFF;
@@ -107,20 +108,26 @@ select {
 }
 
 .btn {
+	position: relative;
 	width: max-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	column-gap: 10px;
+	border-radius: 50px;
 	@include button-reset;
+	padding: 15px 40px;
+	overflow: hidden;
+	transition: color 200ms ease-in-out;
+
+	* {
+		position: relative;
+		z-index: 2; /*текст в кнопке надо оборачивать тегом*/
+	}
 }
 
 .btn-gradient {
-	position: relative;
 	color: $color-white;
-	padding: 15px 40px;
-	border-radius: 50px;
-	overflow: hidden;
 
 	&::before,
 	&::after {
@@ -129,11 +136,6 @@ select {
 		height: 100%;
 		transition: width 250ms ease-in-out;
 		z-index: 1;
-	}
-
-	* {
-		position: relative;
-		z-index: 2; /*текст в кнопке надо оборачивать тегом*/
 	}
 
 	&::before {
@@ -158,9 +160,59 @@ select {
 	}
 }
 
+.btn-white {
+	font-weight: 600;
+	color: $color-main;
+	background-color: $color-white;
+
+	&::after {
+		position: absolute;
+		content: '';
+		height: 100%;
+		left: 0;
+		width: 0;
+		background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+		transition: width 250ms ease-in-out;
+		z-index: 1;
+	}
+	
+	&:hover {
+		color: $color-white;
+
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
+.btn-ghost {
+	border: 1px solid $color-white;
+	color: $color-white;
+
+	&::after {
+		position: absolute;
+		content: '';
+		height: 100%;
+		left: 0;
+		width: 0;
+		border: 1px solid transparent;
+		background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+		transition: width 250ms ease-in-out;
+		z-index: 1;
+	}
+	
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
 .btn-circle {
 	border: 1px solid $color-white;
 	border-radius: 100%;
+	padding: 0;
+	overflow: visible;
 }
 
 .pt-100 {

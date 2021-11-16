@@ -1,0 +1,9 @@
+.footer {
+    background: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4F00C7 14.16%, #2E018E 43.42%, #150264 68.53%, #07024A 88.2%, #010241 100%);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+}
