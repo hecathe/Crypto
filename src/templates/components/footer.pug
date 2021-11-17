@@ -2,7 +2,7 @@ footer.footer
     .container
         .footer__top
             .footer__col
-                a(href="/")
+                a.footer__logo(href="/")
                     svg(width="140" height="21")
                         use(xlink:href="assets/images/sprite.svg#logo")
                 ul.footer__social.social-list
@@ -12,11 +12,11 @@ footer.footer
                                 use(xlink:href="assets/images/sprite.svg#facebook")
                     li.social-list__item
                         a.social-list__link(href="#")
-                            svg(width="10" height="18")
+                            svg(width="18" height="10")
                                 use(xlink:href="assets/images/sprite.svg#vkontakte")
                     li.social-list__item
                         a.social-list__link(href="#")
-                            svg(width="10" height="18")
+                            svg(width="18" height="18")
                                 use(xlink:href="assets/images/sprite.svg#instagram")
             
             ul.footer__nav-list
@@ -40,8 +40,8 @@ footer.footer
                     a.footer__nav-link(href="#") Сравнение
 
             .footer__col
-                a(href="tel:+79999999999") +7 (999) 999-99-99
-                button.btn.btn-ghost(type="button")
+                a.footer__tel(href="tel:+79999999999") +7 (999) 999-99-99
+                button.footer__btn.btn.btn-white(type="button")
                     span Заказать звонок
 
         .footer__bot

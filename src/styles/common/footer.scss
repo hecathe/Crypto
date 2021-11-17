@@ -1,9 +1,137 @@
 .footer {
+    color: $color-white;
     background: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4F00C7 14.16%, #2E018E 43.42%, #150264 68.53%, #07024A 88.2%, #010241 100%);
+
+    a {
+        color: $color-white;
+        text-decoration: none;
+    }
 
     &__top {
         display: flex;
         justify-content: space-between;
         padding: 40px 0;
+    }
+
+    &__col {
+        display: grid;
+        grid-auto-rows: max-content;
+        row-gap: 20px;
+    }
+
+    &__nav-list {
+        column-count: 3;
+        @include list-reset;
+    }
+
+    &__nav-item {
+        margin-bottom: 10px;
+    }
+
+    &__nav-link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+
+        &:hover {
+            background: $color-main-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__tel {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+
+        &:hover {
+            background: $color-main-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__bot {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 20px 0 29px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        @include list-reset;
+    }
+
+    &__link {
+        font-size: 12px;
+        line-height: 15px;
+
+        &:hover {
+            background: $color-main-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.social-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    column-gap: 20px;
+    @include list-reset;
+    
+    &__link {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: $color-white;
+
+        &:hover {
+            background: $color-main-gradient;
+
+            svg {
+                --social: #{$color-white};
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .footer {
+        &__top {
+            flex-direction: column;
+            row-gap: 40px;
+        }
+
+        &__tel {
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        &__nav-list {
+            column-count: 2;
+        }
+
+        &__nav-item {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .footer {
+        &__nav-list {
+            column-count: 1;
+        }
     }
 }

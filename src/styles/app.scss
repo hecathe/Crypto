@@ -10,6 +10,7 @@ $content-padding: 0 16px;
 $font-primary: sans-serif;
 
 //Цвета
+$color-main-gradient: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
 $color-main: #180269;
 $color-dark-grey: #333333;
 $color-grey: #949494;
@@ -141,7 +142,7 @@ select {
 	&::before {
 		width: 100%;
 		left: 0;
-		background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+		background: $color-main-gradient;
 	}
 
 	&::after {
@@ -188,23 +189,27 @@ select {
 .btn-ghost {
 	border: 1px solid $color-white;
 	color: $color-white;
+	box-sizing: border-box;
 
-	&::after {
-		position: absolute;
-		content: '';
-		height: 100%;
-		left: 0;
-		width: 0;
-		border: 1px solid transparent;
-		background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
-		transition: width 250ms ease-in-out;
-		z-index: 1;
-	}
+	// &::after {
+	// 	position: absolute;
+	// 	content: '';
+	// 	width: 0;
+	// 	height: 100%;
+	// 	left: 0;
+	// 	border: 1px solid transparent;
+	// 	background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+	// 	transition: width 250ms ease-in-out;
+	// 	z-index: 1;
+	// }
 	
 	&:hover {
-		&::after {
-			width: 100%;
-		}
+		border: 1px solid transparent;
+		background: $color-main-gradient;
+
+		// &::after {
+		// 	width: 100%;
+		// }
 	}
 }
 

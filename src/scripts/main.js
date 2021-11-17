@@ -40,6 +40,22 @@ svg4everybody({
 	polyfill: true
 });
 
+//header toggle
+const toggleBtn = document.querySelector('.toggle');
+const navlist = document.querySelector('.site-nav');
+const body = document.body;
+
+toggleBtn.addEventListener('click', function() {
+	toggleBtn.classList.toggle(activeClass)
+	navlist.classList.toggle(activeClass)
+	
+	if (navlist.classList.contains(activeClass)) {
+		body.style.overflowY = 'hidden'
+	} else {
+		body.removeAttribute('style')
+	}
+})
+//header toggle end
 
 //form validation
 const mailingForm = document.querySelector('[data-form="mailing"]');

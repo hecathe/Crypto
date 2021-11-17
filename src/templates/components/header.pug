@@ -21,11 +21,23 @@ header.header
                     a.site-nav__link(href="#") Производители
                 li.site-nav__item
                     a.site-nav__link(href="#") Контакты
+            
             ul.header__list.user-nav
                 li.user-nav__item
                     form.search(action="#")
                         label.user-nav__link.btn.btn-circle
                             input(type="search")
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.4489 12.5581L11.4176 12.5268L11.3827 12.554C10.2263 13.4583 8.80066 13.9498 7.33267 13.9501C3.68446 13.9501 0.716016 10.9816 0.716016 7.33342C0.716016 3.6852 3.68446 0.716748 7.33268 0.716748C10.9809 0.716748 13.9494 3.6852 13.9494 7.3334C13.949 8.80177 13.4573 10.2278 12.5525 11.3843L12.5252 11.4191L12.5565 11.4504L16.1845 15.0784L15.0768 16.186L11.4489 12.5581ZM12.3827 7.33342C12.3827 4.5483 10.1178 2.28341 7.33268 2.28341C4.54757 2.28341 2.28268 4.5483 2.28268 7.33342C2.28268 10.1185 4.54757 12.3834 7.33268 12.3834C10.1178 12.3834 12.3827 10.1185 12.3827 7.33342Z" fill="url(#paint_linear_187:21504)" stroke="url(#paint_linear_187:21504)" stroke-width="0.1"/>
+                                <defs>
+                                <linearGradient id="paint_linear_187:21504" x1="2.65625" y1="4.24766" x2="17.8228" y2="5.04092" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFFFFF"/>
+                                <stop offset="0.515625" stop-color="#FFFFFF"/>
+                                <stop offset="1" stop-color="#FFFFFF"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+
                 li.user-nav__item
                     a.user-nav__link.btn.btn-circle(href="#")
                         //- svg(width="20" height="20")
@@ -69,3 +81,6 @@ header.header
                             </linearGradient>
                             </defs>
                         </svg>
+                li.user-nav__item
+                    button.user-nav__link.toggle.btn.btn-circle(href="#" aria-label="Меню")
+                        span
