@@ -11,6 +11,7 @@ $font-primary: sans-serif;
 
 //Цвета
 $color-main-gradient: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+$color-main-back: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4F00C7 14.16%, #2E018E 43.42%, #150264 68.53%, #07024A 88.2%, #010241 100%);
 $color-main: #180269;
 $color-dark-grey: #333333;
 $color-grey: #949494;
@@ -39,8 +40,9 @@ button {
 
 body {
 	font-family: "Montserrat", sans-serif;
-	// font-size: 14px;
-	// line-height: 140%;
+	font-size: 16px;
+	line-height: 140%;
+	overflow-x: hidden;
 }
 
 img {
@@ -108,6 +110,23 @@ select {
 	margin: 0;
 }
 
+.title-wb {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		color: $color-main;
+		text-decoration: none;
+	}
+}
+
 .btn {
 	position: relative;
 	width: max-content;
@@ -117,9 +136,10 @@ select {
 	column-gap: 10px;
 	border-radius: 50px;
 	@include button-reset;
+	font-weight: 600;
 	padding: 15px 40px;
 	overflow: hidden;
-	transition: color 200ms ease-in-out;
+	transition: color 150ms ease-in-out;
 
 	* {
 		position: relative;
@@ -162,7 +182,6 @@ select {
 }
 
 .btn-white {
-	font-weight: 600;
 	color: $color-main;
 	background-color: $color-white;
 
@@ -187,8 +206,8 @@ select {
 }
 
 .btn-ghost {
-	border: 1px solid $color-white;
-	color: $color-white;
+	border: 2px solid $color-main;
+	color: $color-main;
 	box-sizing: border-box;
 
 	// &::after {
@@ -202,8 +221,14 @@ select {
 	// 	transition: width 250ms ease-in-out;
 	// 	z-index: 1;
 	// }
+
+	&_white{
+		border: 2px solid $color-white;
+		color: $color-white;
+	}
 	
 	&:hover {
+		color: $color-white;
 		border: 1px solid transparent;
 		background: $color-main-gradient;
 
@@ -218,6 +243,25 @@ select {
 	border-radius: 100%;
 	padding: 0;
 	overflow: visible;
+}
+
+.swiper-button {
+	width: 50px;
+	height: 50px;
+	background: $color-main;
+	border-radius: 100%;
+
+	&::after {
+		font-size: 14px;
+		color: $color-white;
+	}
+}
+
+.swiper-button-prev {
+	left: 0px;
+}
+.swiper-button-next {
+	right: 0px;
 }
 
 .pt-100 {
@@ -235,8 +279,40 @@ select {
 @import "./common/header.scss";
 @import "./common/footer.scss";
 @import "./common/form-mailing.scss";
+@import "./common/card-item.scss";
 
 //pages
 @import "./pages/index.scss";
 @import "./pages/temporary.scss";
 @import "./pages/main.scss";
+
+@keyframes downup {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(5%);
+	}
+}
+
+@keyframes updown {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(-5%);
+	}
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+	}
+	
+}

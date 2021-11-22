@@ -59,48 +59,78 @@ toggleBtn.addEventListener('click', function() {
 
 //form validation
 const mailingForm = document.querySelector('[data-form="mailing"]');
-const emailField = mailingForm.querySelector('input[type="email"]');
-const submitButton = mailingForm.querySelector('[type="submit"]')
-const responseText = document.querySelector('.form-mailing__response');
-
-const re = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-// const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[a-z0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-function showResponse(text) {
-	responseText.style.display = 'block'
-	responseText.innerHTML = text
-}
-
-emailField.addEventListener('input', function() {
-	if (emailField.value != '') {
-		if (emailField.value.search(re) == 0) {
-			showResponse('Верный формат E-mail :)')
-			emailField.parentElement.classList.remove('error')
-			emailField.parentElement.classList.add('success')
-			submitButton.classList.remove('disabled')
+if (mailingForm) {
+	const emailField = mailingForm.querySelector('input[type="email"]');
+	const submitButton = mailingForm.querySelector('[type="submit"]')
+	const responseText = document.querySelector('.form-mailing__response');
+	
+	const re = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+	
+	// const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[a-z0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	
+	function showResponse(text) {
+		responseText.style.display = 'block'
+		responseText.innerHTML = text
+	}
+	
+	emailField.addEventListener('input', function() {
+		if (emailField.value != '') {
+			if (emailField.value.search(re) == 0) {
+				showResponse('Верный формат E-mail :)')
+				emailField.parentElement.classList.remove('error')
+				emailField.parentElement.classList.add('success')
+				submitButton.classList.remove('disabled')
+			} else {
+				showResponse('Неверный формат E-mail')
+				emailField.parentElement.classList.add('error')
+				emailField.parentElement.classList.remove('success')
+				submitButton.classList.add('disabled')
+			}
 		} else {
-			showResponse('Неверный формат E-mail')
-			emailField.parentElement.classList.add('error')
+			responseText.style.display = 'none'
+			emailField.parentElement.classList.remove('error')
 			emailField.parentElement.classList.remove('success')
-			submitButton.classList.add('disabled')
 		}
-	} else {
-		responseText.style.display = 'none'
-		emailField.parentElement.classList.remove('error')
-		emailField.parentElement.classList.remove('success')
-	}
-})
-
-emailField.addEventListener('blur', function() {
-	if (emailField.value === '') {
-		submitButton.classList.remove('disabled')
-	}
-})
-
-mailingForm.addEventListener('submit', function(event) {
-	if (emailField.parentElement.classList.contains('error') || emailValue == '') {
-		event.preventDefault()
-	}
-})
+	})
+	
+	emailField.addEventListener('blur', function() {
+		if (emailField.value === '') {
+			submitButton.classList.remove('disabled')
+		}
+	})
+	
+	mailingForm.addEventListener('submit', function(event) {
+		if (emailField.parentElement.classList.contains('error') || emailValue == '') {
+			event.preventDefault()
+		}
+	})
+}
 //form validation end
+
+//main catalog slider
+const catalogSliderOnMain = new Swiper('.catalog-slider__slider .swiper-container', {
+	// Optional parameters
+	slidesPerView: 4,
+	spaceBetween: 30,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.catalog-slider__slider .swiper-button-next',
+		prevEl: '.catalog-slider__slider .swiper-button-prev',
+	},
+})
+//main catalog slider end
+
+//partners
+const partnersSlider = new Swiper('.partners__slider .swiper-container', {
+	// Optional parameters
+	slidesPerView: 6,
+	spaceBetween: 43,
+	loop: true,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.partners__slider .swiper-button-next',
+		prevEl: '.partners__slider .swiper-button-prev',
+	},
+})

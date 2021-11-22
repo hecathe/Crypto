@@ -1,0 +1,32 @@
+.card
+    .card__top
+        .card__tags
+            span Хит!
+            span Выбор покупателей
+        .card__btns
+            button.card__btn
+                svg(width="14" height="14")
+                    use(xlink:href="assets/images/sprite.svg#heart-outlined")
+            button.card__btn
+                svg(width="18" height="18")
+                    use(xlink:href="assets/images/sprite.svg#list-plus")
+    a.card__link(href="#")
+        img(src="assets/images/whatsminer-m30s.png" alt="whatsminer-m30s")
+        ul.card__info
+            li.card__info-item
+                span.card__info-term Алгоритм:
+                span.card__info-desc Sha-256
+            li.card__info-item
+                span.card__info-term Валюта:
+                span.card__info-desc Bitcoin (BTC) / BitcoinCash (BCH)
+            li.card__info-item
+                span.card__info-term Хэшрейт:
+                span.card__info-desc 100 TH/s
+            li.card__info-item
+                span.card__info-term Энергопотребление:
+                span.card__info-desc 3100 W
+        .card__bot
+            .card__price 1 000 000 ₽
+            .card__btn.btn.btn-circle
+                svg(width="20" height="20")
+                    use(xlink:href="assets/images/sprite.svg#cart")

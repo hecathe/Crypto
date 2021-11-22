@@ -5,6 +5,124 @@ block variables
 
 block content
     main
+        // Главный экран
         section.main-screen.pt-100
             .container
-                h1.main-screen__title Продажа оборудования для майнинга
+                .main-screen__text-wrap
+                    h1.main-screen__title Продажа оборудования для майнинга
+                    a.main-screen__btn.btn.btn-gradient(href="#") 
+                        span В каталог
+                .main-screen__svg
+                    svg.main-screen__block(width="735" height="879")
+                        use(xlink:href="assets/images/sprite.svg#block-animation-1")
+                    svg.main-screen__bot(width="924" height="438")
+                        use(xlink:href="assets/images/sprite.svg#mining-bottom")
+        
+        // Производители
+        section.producers
+            .container
+                h2.producers__title.title-second Производители
+                ul.producers__list.cards-list.cards-list_col-3
+                    li.cards-list__item
+                        a.cards-list__link(href="#")
+                            img(src="assets/images/whatsminer-m30s.png", alt="whatsminer-m30s")
+                            .cards-list__btn.btn.btn-ghost
+                                span Whatsminer
+                    li.cards-list__item 
+                        a.cards-list__link(href="#")
+                            img(src="assets/images/whatsminer-m30s.png", alt="whatsminer-m30s")
+                            .cards-list__btn.btn.btn-ghost
+                                span Whatsminer
+                    li.cards-list__item 
+                        a.cards-list__link(href="#")
+                            img(src="assets/images/whatsminer-m30s.png", alt="whatsminer-m30s")
+                            .cards-list__btn.btn.btn-ghost
+                                span Whatsminer
+
+        // Каталог слайдер
+        section.catalog-slider
+            .container
+                .catalog-slider__title-wrap.title-wb
+                    h2.title-wb__title.title-second Каталог
+                    a.title-wb__link(href="#") Смотреть все
+                        svg(width="16" height="16")
+                            use(xlink:href="assets/images/sprite.svg#arrow-back-outline")
+                .catalog-slider__slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                    
+                    .swiper-button.swiper-button-prev
+                    .swiper-button.swiper-button-next
+
+        // О компании
+        section.about-company
+            svg.about-company__img(width="398" height="386")
+                use(xlink:href="assets/images/sprite.svg#bg-1")
+            svg.about-company__img-wave
+                use(xlink:href="assets/images/sprite.svg#wave")
+            .container
+                .about-company__text
+                    h2.about-company__title.title-second О компании
+                    p Мы - быстро развивающийся и современный магазин оборудования для майнинга. Исходя из своего опыта мы всегда поможем в выборе и подскажем клиенту что будет более подходящим вариантом покупки на заданный бюджет.
+                    a.about-company__btn.btn.btn-ghost.btn-ghost_white(href="#") Подробнее о компании
+                ul.about-company__static.static-list
+                    li.static-list__item
+                        .static-list__term 100+
+                        .static-list__desc тысяч довольных покупателей
+                    li.static-list__item
+                        .static-list__term 50
+                        .static-list__desc асиков в наличии
+                    li.static-list__item
+                        .static-list__term 94+
+                        .static-list__desc тысячи положительных отзывов
+                    li.static-list__item
+                        .static-list__term 13
+                        .static-list__desc складов в России
+
+        // Партнеры
+        section.partners
+            .container
+                h2.partners__title.title-second Наши партнеры
+                
+                .partners__slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                a.partners__item(href="#")
+                                    img(src="assets/images/bitmain.png", alt="")
+                            .swiper-slide
+                                a.partners__item(href="#")
+                                    img(src="assets/images/baikal.png", alt="")
+                            .swiper-slide
+                                a.partners__item(href="#")
+                                    img(src="assets/images/innosilicon.png", alt="")
+                            .swiper-slide
+                                a.partners__item(href="#")
+                                    img(src="assets/images/whatsminer.png", alt="")
+                            .swiper-slide
+                                a.partners__item(href="#")
+                                    img(src="assets/images/canaan.png", alt="")
+                            .swiper-slide
+                                a.partners__item(href="#")
+                                    img(src="assets/images/bitfury.png", alt="")
+                    .swiper-button.swiper-button-prev
+                    .swiper-button.swiper-button-next
+
+        // Новости
+        section.main-news
+            .container
+                .title-wb
+                    h2.title-wb__title.title-second Новости
+                    a.title-wb__link(href="#") Все новости
+                        svg(width="16" height="16")
+                            use(xlink:href="assets/images/sprite.svg#arrow-back-outline")
