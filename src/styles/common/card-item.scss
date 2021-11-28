@@ -1,71 +1,74 @@
 .card {
     position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 428px;
+    transition: min-width 150ms ease-in-out;
 
-    &__link {
-        position: relative;
+    &:hover {
+        min-width: calc(100% + 20px);
+        
+        .card__wrap {
+            min-height: 428px;
+            transform: translate(-10px, 0px);
+        }
+        
+        img {
+            // height: 0;
+            display: none;
+        }
+
+        .card__tags {
+            display: none;
+        }
+
+        .card__info {
+            height: auto;
+            visibility: visible;
+        }
+
+        .card__name {
+            margin-top: 30px;
+        }
+
+        .card__bot {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
+            .card__btn {
+                display: none;
+            }
+
+            .card__onhover-btn {
+                display: flex;
+                width: 100%;
+            }
+        }
+    }
+
+    &__wrap {
+        position: absolute;
         min-height: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        justify-content: space-between;
         background: $color-white;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
-
         text-decoration: none;
         padding: 20px;
+        transition: min-height 150ms ease-in-out;
 
         img {
-            max-width: 290px;
-            max-height: 290px;
+            max-width: 250px;
+            max-height: 250px;
             width: 100%;
             object-fit: contain;
-            margin-bottom: 20px;
+            transition: height 150ms ease-in-out;
             z-index: 1;
         }
-
-        // &::before {
-        //     position: absolute;
-        //     content: '';
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: $color-white;
-        //     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-        //     border-radius: 20px;
-        //     transition-property: height, top;
-        //     transition: 150ms ease-in-out;
-        // }
-
-        &:hover {
-            width: calc(100% + 20px);
-            height: calc(100% + 28px);
-            transform: translate(-10px, -10px);
-            
-            img {
-                height: 0;
-            }
-
-            .card__info {
-                height: auto;
-                visibility: visible;
-            }
-
-            // &::before {
-            //     width: calc(100% + 20px);
-            //     height: calc(100% + 28px);
-            //     top: -14px;
-            //     left: -10px;
-            // }
-        }
-    }
-
-    &__info {
-        height: 0;
-        @include list-reset;
-        visibility: hidden;
-        z-index: 1;
     }
 
     &__top {
@@ -98,7 +101,9 @@
 
     &__btns {
         display: flex;
+        align-items: flex-start;
         column-gap: 10px;
+        margin-left: auto;
     }
 
     &__btn {
@@ -111,5 +116,70 @@
         border: 1px solid $color-main;
         box-sizing: border-box;
         border-radius: 100%;
+
+        &:hover, &.active {
+            background-color: $color-main;
+
+            svg {
+                --card-btns: #{$color-white};
+            }
+        }
+    }
+
+    &__info {
+        display: grid;
+        row-gap: 15px;
+        height: 0;
+        @include list-reset;
+        visibility: hidden;
+        z-index: 1;
+    }
+
+    &__info-item {
+        display: grid;
+        row-gap: 5px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__info-term {
+        color: $color-grey3;
+    }
+
+    &__info-desc {
+        font-weight: 500;
+        color: $color-main;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-dark-grey;
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    &__bot {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .card__btn {
+            --cart-color: #{$color-main};
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-main;
+    }
+
+    &__onhover-btn {
+        display: none;
     }
 }

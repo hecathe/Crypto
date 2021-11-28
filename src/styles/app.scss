@@ -13,8 +13,11 @@ $font-primary: sans-serif;
 $color-main-gradient: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
 $color-main-back: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4F00C7 14.16%, #2E018E 43.42%, #150264 68.53%, #07024A 88.2%, #010241 100%);
 $color-main: #180269;
+$color-background: #F8FBFD;
 $color-dark-grey: #333333;
 $color-grey: #949494;
+$color-grey2: #B9B5B5;
+$color-grey3: #8B8C96;
 $color-white: #FFFFFF;
 
 @import "./common/fonts.scss";
@@ -42,6 +45,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 16px;
 	line-height: 140%;
+	background-color: $color-background;
 	overflow-x: hidden;
 }
 
@@ -124,6 +128,26 @@ select {
 		line-height: 22px;
 		color: $color-main;
 		text-decoration: none;
+
+		&:hover {
+			background: linear-gradient(93.17deg, #1FA2FF .68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			svg {
+				stop {
+                    &:first-child {
+                        stop-color: #1FA2FF;
+                    }
+                    &:nth-child(2) {
+                        stop-color: #12D8FA;
+                    }
+                    &:last-child {
+                        stop-color: #A6FFCB;
+                    }
+                }
+			}
+		}
 	}
 }
 
@@ -268,6 +292,10 @@ select {
 	padding-top: 100px;
 }
 
+.mb-100 {
+	margin-bottom: 100px;
+}
+
 @media screen and (max-width: 767.98px) {
 	.title-second {
 		font-size: 26px;
@@ -280,6 +308,7 @@ select {
 @import "./common/footer.scss";
 @import "./common/form-mailing.scss";
 @import "./common/card-item.scss";
+@import "./common/about-block.scss";
 
 //pages
 @import "./pages/index.scss";
