@@ -207,6 +207,19 @@
         .swiper-container {
             max-width: 1055px;
         }
+
+        .swiper-button {
+            transform: translateY(-50%);
+            margin-top: 0;
+        }
+
+        .swiper-button-prev {
+            left: -17px;
+        }
+
+        .swiper-button-next {
+            right: -17px;
+        }
     }
 
     &__item {
@@ -282,6 +295,7 @@
         p {
             margin: 0;
             margin-bottom: 10px;
+            transition: background 150ms ease-in-out;
 
             &:last-of-type {
                 margin-bottom: 0;

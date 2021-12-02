@@ -286,6 +286,10 @@ select {
 }
 .swiper-button-next {
 	right: 0px;
+
+	&::after {
+		padding-left: 5px;
+	}
 }
 
 .pt-100 {
@@ -309,11 +313,13 @@ select {
 @import "./common/form-mailing.scss";
 @import "./common/card-item.scss";
 @import "./common/about-block.scss";
+@import "./common/breadcrumbs.scss";
 
 //pages
 @import "./pages/index.scss";
 @import "./pages/temporary.scss";
 @import "./pages/main.scss";
+@import "./pages/catalog.scss";
 
 @keyframes downup {
 	from {

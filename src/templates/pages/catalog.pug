@@ -1,0 +1,33 @@
+extends ../template
+
+block variables
+    - var title = 'Каталог'
+
+block content
+    main
+        // ыва
+        section.catalog
+            .heading.pt-100
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Каталог
+            .container
+                .catalog__sort.sort
+                    .sort__item
+                        select(name="")
+                            option(value="") Сортировка
+                    .sort__item
+                        select(name="")
+                            option(value="") Цена
+                    .sort__item
+                        select(name="")
+                            option(value="") Продукция
+                    .sort__item
+                        select(name="")
+                            option(value="") Энергопотребление
+                    .sort__item
+                        select(name="")
+                            option(value="") Алгоритм
+                    .sort__item
+                        select(name="")
+                            option(value="") Валюты
