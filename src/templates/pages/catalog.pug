@@ -6,28 +6,95 @@ block variables
 block content
     main
         // ыва
-        section.catalog
-            .heading.pt-100
+        section.catalog.mb-100
+            .heading.pt-100.mb-60
                 .container
                     include ../components/breadcrumbs.pug
                     h1.heading__title.title-first Каталог
-            .container
+            .catalog__container.container
                 .catalog__sort.sort
-                    .sort__item
+                    .sort__item.select
                         select(name="")
                             option(value="") Сортировка
-                    .sort__item
+                            option(value="") От
+                            option(value="") До
+                    .sort__item.select
                         select(name="")
                             option(value="") Цена
-                    .sort__item
+                            option(value="") От
+                            option(value="") До
+                    .sort__item.select
                         select(name="")
                             option(value="") Продукция
-                    .sort__item
+                            option(value="") Bitmain
+                            option(value="") Whatsminer
+                    .sort__item.select
                         select(name="")
                             option(value="") Энергопотребление
-                    .sort__item
+                            option(value="") 140
+                            option(value="") 80
+                    .sort__item.select
                         select(name="")
                             option(value="") Алгоритм
-                    .sort__item
+                    .sort__item.select
                         select(name="")
                             option(value="") Валюты
+
+                ul.catalog__grid.catalog-grid
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+                    li.catalog-grid__item
+                        include ../components/card-item.pug
+
+                .catalog__pag-wrap
+                    .catalog__progress-bar.progress
+                        span.progress__text Отображается 12 из 20
+                        .progress__bar
+                            .progress__bar-ident
+                    button.catalog__btn-more.btn.btn-ghost Показать больше
+
+        // Просмотренные
+        section.catalog-slider
+            .container
+                h2.catalog-slider__title.title-second.mb-60 Вы смотрели
+                    
+                .catalog-slider__slider.slider-w-bar
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                        .swiper-scrollbar
+                    
+                    .swiper-button.swiper-button-prev
+                    .swiper-button.swiper-button-next
+
+        // About text
+        include ../components/about-block.pug 

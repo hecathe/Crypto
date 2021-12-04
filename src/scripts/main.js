@@ -118,6 +118,11 @@ const catalogSliderOnMain = new Swiper('.catalog-slider__slider .swiper-containe
 		nextEl: '.catalog-slider__slider .swiper-button-next',
 		prevEl: '.catalog-slider__slider .swiper-button-prev',
 	},
+
+	// And if we need scrollbar
+	scrollbar: {
+		el: '.catalog-slider__slider .swiper-scrollbar',
+	},
 })
 //main catalog slider end
 
@@ -134,3 +139,27 @@ const partnersSlider = new Swiper('.partners__slider .swiper-container', {
 		prevEl: '.partners__slider .swiper-button-prev',
 	},
 })
+//partners end
+
+// //slider with thumbs
+const sliderThumb = new Swiper('.swiper-w-thumbs .swiper-thumbs', {
+	slidesPerView: 3,
+	spaceBetween: 30,
+})
+const sliderCatalogCard = new Swiper('.swiper-w-thumbs .swiper-view', {
+	slidesPerView: 1,
+	loop: true,
+	spaceBetween: 40,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-w-thumbs .swiper-button-next',
+		prevEl: '.swiper-w-thumbs .swiper-button-prev',
+	  },
+
+	thumbs: {
+		swiper: sliderThumb,
+	},
+})
+
+// //slider with thumbs end

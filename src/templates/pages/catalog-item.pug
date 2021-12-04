@@ -1,0 +1,125 @@
+extends ../template
+
+block variables
+    - var title = 'Карточка товара'
+
+block content
+    main
+        // ыва
+        section.catalog-item.mb-100
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Каталог
+
+            .catalog-item__container.container
+                .catalog-item__wrap.mb-120
+                    .catalog-item__slider.swiper-w-thumbs
+                        .catalog-item__slider-top
+                            .swiper-container.swiper-view
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                .swiper-button.swiper-button-prev
+                                .swiper-button.swiper-button-next
+                        .catalog-item__slider-bot
+                            .swiper-container.swiper-thumbs
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+                                    .swiper-slide
+                                        .catalog-item__slide
+                                            img(src="assets/images/whatsminer-m30s.png" alt="")
+
+                    .catalog-item__info-wrap
+                        h2.catalog-item__name.title-second ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                        ul.catalog-item__info-list.card__info
+                            li.card__info-item
+                                span.card__info-term Алгоритм:
+                                span.card__info-desc Sha-256
+                            li.card__info-item
+                                span.card__info-term Валюта:
+                                span.card__info-desc Bitcoin (BTC) / BitcoinCash (BCH)
+                            li.card__info-item
+                                span.card__info-term Хэшрейт:
+                                span.card__info-desc 100 TH/s
+                            li.card__info-item
+                                span.card__info-term Энергопотребление:
+                                span.card__info-desc 3100 W
+                        .catalog-item__price 1 000 000 ₽
+                        .catalog-item__btns
+                            button.catalog-item__add-btn.btn.btn-gradient
+                                svg(width="22" height="22")
+                                    use(xlink:href="assets/images/sprite.svg#cart")
+                                span В корзину
+                            button.catalog-item__compare-btn.btn.btn-ghost Сравнить
+
+                .catalog-item__tabs.tabs
+                    .tabs__nav
+                        button.tabs__btn(data-tab-id="catalog-item", data-tab-control="descr") Описание
+                        button.tabs__btn(data-tab-id="catalog-item", data-tab-control="reviews") Отзывы
+                    .tabs__content(data-tab-id="catalog-item", data-tab-block="descr")
+                        p Компания Bitmain выпустила Asic Antminer Z11e 70 k Sol/s для майнинга Zcash на алгоритме Equihash.
+                        p Асик Antminer Z11e 70 k Sol/s изготовлен из высококачественного алюминия, поэтому конструкция устройства надежно защищена от механических повреждений. По бокам расположены специальные кулера в количестве 2 шт, которые обеспечивают эффективное охлаждение, защищая асик от перегрева.
+                        p Асик майнинг Z11e выдает мощность 70 k Sol/s, при потребляемой мощности в 1390W.
+                        p Bitmain Antminer Z11e 70 k Sol/s работает при температуре внешней среды от 5 °C до 40 °C и имеет вес 5,4 кг.
+                    .tabs__content(data-tab-id="catalog-item", data-tab-block="reviews")
+                        a(href="#")
+                            span Читать все отзывы
+                            svg(width="16" height="16")
+                                use(xlink:href="assets/images/sprite.svg#arrow-back-outline")
+
+                        .tabs__slider.reviews-slider
+                            .swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .reviews-slider__item
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim aliquet scelerisque fusce. Turpis et arcu, enim dignissim metus, et morbi tempor. Turpis nisi, nam nec massa, enim aenean dolor. Sed quis sit viverra orci....
+                                            a(href="#") Смотреть отзыв целиком
+
+                                            .reviews-slider__bot
+                                                .reviews-slider__author
+                                                    img(src="assets/images/ava.png", alt="")
+                                                    p Андрей Андреев
+                                                .reviews-slider__logo
+                                                    img(src="assets/images/svg/vk.svg", alt="")
+                                    .swiper-slide
+                                        .reviews-slider__item
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim aliquet scelerisque fusce. Turpis et arcu, enim dignissim metus, et morbi tempor. Turpis nisi, nam nec massa, enim aenean dolor. Sed quis sit viverra orci....
+                                            a(href="#") Смотреть отзыв целиком
+
+                                            .reviews-slider__bot
+                                                .reviews-slider__author
+                                                    img(src="assets/images/ava.png", alt="")
+                                                    p Андрей Андреев
+                                                .reviews-slider__logo
+                                                    img(src="assets/images/svg/vk.svg", alt="")
+                                    .swiper-slide
+                                        .reviews-slider__item
+                                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim aliquet scelerisque fusce. Turpis et arcu, enim dignissim metus, et morbi tempor. Turpis nisi, nam nec massa, enim aenean dolor. Sed quis sit viverra orci....
+                                            a(href="#") Смотреть отзыв целиком
+
+                                            .reviews-slider__bot
+                                                .reviews-slider__author
+                                                    img(src="assets/images/ava.png", alt="")
+                                                    p Андрей Андреев
+                                                .reviews-slider__logo
+                                                    img(src="assets/images/svg/vk.svg", alt="")
+

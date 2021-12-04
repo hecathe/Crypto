@@ -18,6 +18,8 @@ $color-dark-grey: #333333;
 $color-grey: #949494;
 $color-grey2: #B9B5B5;
 $color-grey3: #8B8C96;
+$color-progress: #E9E9E9;
+$color-bb: #C6C6C6;
 $color-white: #FFFFFF;
 
 @import "./common/fonts.scss";
@@ -158,9 +160,9 @@ select {
 	justify-content: center;
 	align-items: center;
 	column-gap: 10px;
+	font-weight: 600;
 	border-radius: 50px;
 	@include button-reset;
-	font-weight: 600;
 	padding: 15px 40px;
 	overflow: hidden;
 	transition: color 150ms ease-in-out;
@@ -253,7 +255,7 @@ select {
 	
 	&:hover {
 		color: $color-white;
-		border: 1px solid transparent;
+		border: 2px solid transparent;
 		background: $color-main-gradient;
 
 		// &::after {
@@ -292,12 +294,49 @@ select {
 	}
 }
 
+.select {
+	position: relative;
+
+	select {
+		background: none;
+		border: 1px solid $color-main;
+		box-sizing: border-box;
+		border-radius: 40px;
+		padding: 10px 20px;
+		padding-right: 39px;
+		cursor: pointer;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		right: 20px;
+		width: 14px;
+		height: 14px;
+		background-image: url('../images/sprite.svg#arrow-down');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+}
+
 .pt-100 {
 	padding-top: 100px;
 }
 
+.mb-60 {
+	margin-bottom: 60px;
+}
+
 .mb-100 {
 	margin-bottom: 100px;
+}
+
+.mb-120 {
+	margin-bottom: 120px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -320,6 +359,7 @@ select {
 @import "./pages/temporary.scss";
 @import "./pages/main.scss";
 @import "./pages/catalog.scss";
+@import "./pages/catalog-item.scss";
 
 @keyframes downup {
 	from {

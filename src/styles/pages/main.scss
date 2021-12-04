@@ -99,7 +99,7 @@
 }
 
 .catalog-slider{
-    margin-bottom: 106px;
+    margin-bottom: 100px;
 
     &__title-wrap {
         margin-bottom: 45px;
@@ -119,6 +119,23 @@
             &.swiper-button-disabled {
                 display: none;
             }
+        }
+
+        &.slider-w-bar {
+            padding-bottom: 50px;
+
+            .swiper-button {
+                transform: translateY(-50%);
+            }
+        }
+
+        .swiper-scrollbar {
+            bottom: -50px;
+            background: $color-progress;
+        }
+
+        .swiper-scrollbar-drag {
+            background-color: $color-main;
         }
     }
 }
