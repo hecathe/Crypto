@@ -1,0 +1,95 @@
+extends ../template
+
+block variables
+    - var title = 'FAQ'
+
+block content
+    main
+        // faq
+        section.faq.mb-70
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first FAQ
+            .container
+                .faq__wrap
+                    .faq__side
+                        .faq__caption.title-second Частые вопросы
+                        p.faq__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa ultrices tellus id enim, odio ac eu senectus. Hac vulputate auctor tellus sed semper nunc aliquam, quis dui. Tempus augue hendrerit ultricies urna id tristique quisque. Augue at phasellus sit ac.
+                        button.btn.btn-ghost Задать вопрос
+                    .faq__accordion.accordion
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Что такое майнинг?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Какие у майнера требования к доступу в Интернет?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Сколько зарабатывают майнеры?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+                        
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Как удаленно управлять фермой?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+                        
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Как настроить майнинг на Linux?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Что будет, если два майнера зайдут в пул под одним воркером?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+                        
+                        .ac
+                            .ac-header
+                                button.ac-trigger
+                                    span Я майню в пуле и нахожу блок. Могу я не отдавать его пулу и забрать все BTC себе?
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#arrow-down")
+                            .ac-panel
+                                .ac-content
+                                    p В операционных системах семейства Windows использовать удаленный рабочий стол (RDP) для управления фермами нельзя, т.к. он работает со своей виртуальной видеокартой. Остановив майнинг, вы не запустите его снова, т.к. видеокарты не будут корректно обнаружены. Используйте сторонние инструменты, например TeamViewer, *VNC и другие. Под linux (Ubuntu, XUbuntu, Debian) lightGDM не позволяет получать ресурсы видеокарты в удаленной консоли. С GDM все работает нормально. Проверено с cgminer, diablo.
+
+        // Form
+        include ../components/newsletter-form.pug
+
+        // About text
+        include ../components/about-block.pug

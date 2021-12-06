@@ -15,6 +15,7 @@ $color-main-back: radial-gradient(87.78% 132.53% at 24.8% -1.08%, #6100E5 0%, #4
 $color-main: #180269;
 $color-background: #F8FBFD;
 $color-dark-grey: #333333;
+$color-mid-grey: #656565;
 $color-grey: #949494;
 $color-grey2: #B9B5B5;
 $color-grey3: #8B8C96;
@@ -79,12 +80,8 @@ select {
 	padding-right: 20px;
 	padding-left: 20px;
 
-	&__narrow {
-		max-width: 700px;
-	}
-
-	&__narrow--center {
-		margin: 0 auto;
+	&_narrow {
+		max-width: 770px;
 	}
 }
 
@@ -271,6 +268,35 @@ select {
 	overflow: visible;
 }
 
+.link-more {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	font-weight: 600;
+    color: $color-main;
+	text-decoration: none;
+
+	&:hover {
+		background: linear-gradient(93.17deg, #1FA2FF .68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		svg {
+			stop {
+				&:first-child {
+					stop-color: #1FA2FF;
+				}
+				&:nth-child(2) {
+					stop-color: #12D8FA;
+				}
+				&:last-child {
+					stop-color: #A6FFCB;
+				}
+			}
+		}
+	}
+}
+
 .swiper-button {
 	width: 50px;
 	height: 50px;
@@ -331,6 +357,10 @@ select {
 	margin-bottom: 60px;
 }
 
+.mb-70 {
+	margin-bottom: 70px;
+}
+
 .mb-100 {
 	margin-bottom: 100px;
 }
@@ -353,6 +383,8 @@ select {
 @import "./common/card-item.scss";
 @import "./common/about-block.scss";
 @import "./common/breadcrumbs.scss";
+@import "./common/news-card.scss";
+@import "./common/newsletter-form.scss";
 
 //pages
 @import "./pages/index.scss";
@@ -360,6 +392,9 @@ select {
 @import "./pages/main.scss";
 @import "./pages/catalog.scss";
 @import "./pages/catalog-item.scss";
+@import "./pages/news.scss";
+@import "./pages/news-item.scss";
+@import "./pages/faq.scss";
 
 @keyframes downup {
 	from {

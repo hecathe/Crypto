@@ -13,13 +13,16 @@
         column-gap: 10px;
         margin-bottom: 50px;
     }
+}
 
-    &__pag-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 50px;
-    }
+.pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    border-top: 1px solid $color-bb;
+    margin-top: 70px;
+    padding-top: 30px;
 
     &__btn-more {
         transition-property: background, color;
@@ -65,7 +68,4 @@
     column-gap: 27px;
     row-gap: 50px;
     @include list-reset;
-    border-bottom: 1px solid $color-bb;
-    padding-bottom: 70px;
-    margin-bottom: 30px;
 }

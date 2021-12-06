@@ -76,15 +76,24 @@ block content
                         button.tabs__btn(data-tab-id="catalog-item", data-tab-control="descr") Описание
                         button.tabs__btn(data-tab-id="catalog-item", data-tab-control="reviews") Отзывы
                     .tabs__content(data-tab-id="catalog-item", data-tab-block="descr")
-                        p Компания Bitmain выпустила Asic Antminer Z11e 70 k Sol/s для майнинга Zcash на алгоритме Equihash.
-                        p Асик Antminer Z11e 70 k Sol/s изготовлен из высококачественного алюминия, поэтому конструкция устройства надежно защищена от механических повреждений. По бокам расположены специальные кулера в количестве 2 шт, которые обеспечивают эффективное охлаждение, защищая асик от перегрева.
-                        p Асик майнинг Z11e выдает мощность 70 k Sol/s, при потребляемой мощности в 1390W.
-                        p Bitmain Antminer Z11e 70 k Sol/s работает при температуре внешней среды от 5 °C до 40 °C и имеет вес 5,4 кг.
+                        .tabs__text
+                            p Компания Bitmain выпустила Asic Antminer Z11e 70 k Sol/s для майнинга Zcash на алгоритме Equihash.
+                            p Асик Antminer Z11e 70 k Sol/s изготовлен из высококачественного алюминия, поэтому конструкция устройства надежно защищена от механических повреждений. По бокам расположены специальные кулера в количестве 2 шт, которые обеспечивают эффективное охлаждение, защищая асик от перегрева.
+                            p Асик майнинг Z11e выдает мощность 70 k Sol/s, при потребляемой мощности в 1390W.
+                            p Bitmain Antminer Z11e 70 k Sol/s работает при температуре внешней среды от 5 °C до 40 °C и имеет вес 5,4 кг.
                     .tabs__content(data-tab-id="catalog-item", data-tab-block="reviews")
-                        a(href="#")
+                        a.tabs__link-more.link-more(href="#")
                             span Читать все отзывы
-                            svg(width="16" height="16")
-                                use(xlink:href="assets/images/sprite.svg#arrow-back-outline")
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.78022 12.6667C6.87981 12.667 6.97822 12.645 7.06821 12.6024C7.15819 12.5597 7.23747 12.4974 7.30022 12.42L10.5202 8.42002C10.6183 8.30073 10.6719 8.1511 10.6719 7.99669C10.6719 7.84227 10.6183 7.69264 10.5202 7.57335L7.18688 3.57335C7.07372 3.43721 6.91112 3.35159 6.73483 3.33534C6.55855 3.31909 6.38303 3.37353 6.24688 3.48669C6.11074 3.59985 6.02512 3.76245 6.00887 3.93874C5.99262 4.11502 6.04706 4.29054 6.16022 4.42669L9.14022 8.00002L6.26022 11.5734C6.17869 11.6712 6.12691 11.7904 6.11099 11.9167C6.09507 12.0431 6.11568 12.1714 6.17039 12.2864C6.22509 12.4014 6.3116 12.4984 6.41967 12.5658C6.52774 12.6332 6.65286 12.6682 6.78022 12.6667Z" fill="url(#paint0_linear_187_21587)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_187_21587" x1="10.6719" y1="4.54597" x2="5.84442" y2="4.67956" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#180269"/>
+                                        <stop offset="0.515625" stop-color="#180269"/>
+                                        <stop offset="1" stop-color="#180269"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
 
                         .tabs__slider.reviews-slider
                             .swiper-container
@@ -92,34 +101,61 @@ block content
                                     .swiper-slide
                                         .reviews-slider__item
                                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim aliquet scelerisque fusce. Turpis et arcu, enim dignissim metus, et morbi tempor. Turpis nisi, nam nec massa, enim aenean dolor. Sed quis sit viverra orci....
-                                            a(href="#") Смотреть отзыв целиком
+                                            a.reviews-slider__link(href="#") Смотреть отзыв целиком
 
                                             .reviews-slider__bot
                                                 .reviews-slider__author
                                                     img(src="assets/images/ava.png", alt="")
-                                                    p Андрей Андреев
+                                                    span Андрей Андреев
                                                 .reviews-slider__logo
                                                     img(src="assets/images/svg/vk.svg", alt="")
                                     .swiper-slide
                                         .reviews-slider__item
                                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim aliquet scelerisque fusce. Turpis et arcu, enim dignissim metus, et morbi tempor. Turpis nisi, nam nec massa, enim aenean dolor. Sed quis sit viverra orci....
-                                            a(href="#") Смотреть отзыв целиком
+                                            a.reviews-slider__link(href="#") Смотреть отзыв целиком
 
                                             .reviews-slider__bot
                                                 .reviews-slider__author
                                                     img(src="assets/images/ava.png", alt="")
-                                                    p Андрей Андреев
+                                                    span Андрей Андреев
                                                 .reviews-slider__logo
                                                     img(src="assets/images/svg/vk.svg", alt="")
                                     .swiper-slide
                                         .reviews-slider__item
                                             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim aliquet scelerisque fusce. Turpis et arcu, enim dignissim metus, et morbi tempor. Turpis nisi, nam nec massa, enim aenean dolor. Sed quis sit viverra orci....
-                                            a(href="#") Смотреть отзыв целиком
+                                            a.reviews-slider__link(href="#") Смотреть отзыв целиком
 
                                             .reviews-slider__bot
                                                 .reviews-slider__author
                                                     img(src="assets/images/ava.png", alt="")
-                                                    p Андрей Андреев
+                                                    span Андрей Андреев
                                                 .reviews-slider__logo
                                                     img(src="assets/images/svg/vk.svg", alt="")
+                        .swiper-button.swiper-button-prev
+                        .swiper-button.swiper-button-next
 
+        // Просмотренные
+        section.catalog-slider
+            .container
+                h2.catalog-slider__title.title-second.mb-60 Вы смотрели
+                    
+                .catalog-slider__slider.slider-w-bar
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                            .swiper-slide
+                                include ../components/card-item.pug
+                        .swiper-scrollbar
+                    
+                    .swiper-button.swiper-button-prev
+                    .swiper-button.swiper-button-next
+
+        // About text
+        include ../components/about-block.pug

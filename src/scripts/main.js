@@ -15,9 +15,10 @@ if (tabIdList) {
 
 	function tabSwith(name, tab, tabGroup) {
 		for (const control of tab.controlList) control.classList.remove(activeClass);
-		for (const block of tab.blockList) block.style.display = "none";
+		// for (const block of tab.blockList) block.style.display = "none";
+		for (const block of tab.blockList) block.classList.remove(activeClass);
 		document.querySelector(`[data-tab-id="${tabGroup}"][data-tab-control="${name}"]`).classList.add(activeClass);
-		document.querySelector(`[data-tab-id="${tabGroup}"][data-tab-block="${name}"]`).style.display = "";
+		document.querySelector(`[data-tab-id="${tabGroup}"][data-tab-block="${name}"]`).classList.add(activeClass);
 	}
 
 	for (const tabGroup of tabGroupList) {
@@ -25,7 +26,7 @@ if (tabIdList) {
 			controlList: document.querySelectorAll(`[data-tab-id="${tabGroup}"][data-tab-control]`),
 			blockList: document.querySelectorAll(`[data-tab-id="${tabGroup}"][data-tab-block]`),
 		};
-		console.log(tab);
+		// console.log(tab);
 		tabSwith(tab.controlList[0].dataset.tabControl, tab, tabGroup);
 
 		for (const control of tab.controlList) {
@@ -126,6 +127,25 @@ const catalogSliderOnMain = new Swiper('.catalog-slider__slider .swiper-containe
 })
 //main catalog slider end
 
+//news slider
+const newsSlider = new Swiper('.news-slider__slider .swiper-container', {
+	// Optional parameters
+	slidesPerView: 3,
+	spaceBetween: 30,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.catalog-slider__slider .swiper-button-next',
+		prevEl: '.catalog-slider__slider .swiper-button-prev',
+	},
+
+	// And if we need scrollbar
+	scrollbar: {
+		el: '.catalog-slider__slider .swiper-scrollbar',
+	},
+})
+//news slider end
+
 //partners
 const partnersSlider = new Swiper('.partners__slider .swiper-container', {
 	// Optional parameters
@@ -141,7 +161,7 @@ const partnersSlider = new Swiper('.partners__slider .swiper-container', {
 })
 //partners end
 
-// //slider with thumbs
+// slider with thumbs
 const sliderThumb = new Swiper('.swiper-w-thumbs .swiper-thumbs', {
 	slidesPerView: 3,
 	spaceBetween: 30,
@@ -162,4 +182,26 @@ const sliderCatalogCard = new Swiper('.swiper-w-thumbs .swiper-view', {
 	},
 })
 
-// //slider with thumbs end
+// slider with thumbs end
+
+// reviews slider
+const reviewSlider = new Swiper('.reviews-slider .swiper-container', {
+	slidesPerView: 2,
+	spaceBetween: 25,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.tabs__content .swiper-button-next',
+		prevEl: '.tabs__content .swiper-button-prev',
+	},
+})
+// reviews slider end
+
+// accordion
+if (document.querySelectorAll('.accordion')) {
+	const accordions = document.querySelectorAll('.accordion');
+
+	accordions.forEach((accordion) => {
+		new Accordion(accordion);
+	})
+}

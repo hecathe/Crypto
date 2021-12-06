@@ -1,0 +1,36 @@
+.news-item {
+    &__caption {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 32px;
+        color: $color-dark-grey;
+        margin-bottom: 26px;
+    }
+
+    &__date {
+        display: block;
+        color: $color-mid-grey;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        max-height: 430px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.news-slider {
+    &__title-wrap {
+        margin-bottom: 60px;
+    }
+}
