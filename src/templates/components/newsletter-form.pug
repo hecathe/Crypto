@@ -1,5 +1,18 @@
-section.newsletter
+section.newsletter.mb-100
     .container
         .newsletter__wrap
-            svg(width="712" height="831")
+            .newsletter__content
+                .form-mailing
+                    h2.form-mailing__title.title-second Получать рассылку
+                    p.form-mailing__text Главные новости и события майнинг сферы в одном письме самым удобным способом. Никакого спама, только по делу.
+
+                    form.form-mailing__form(action="#" data-form="mailing")
+                        label.form-mailing__label
+                            input.form-mailing__input(type="email" placeholder="Введите ваш email")
+                        button.form-mailing__btn.btn.btn-gradient(type="submit") 
+                            span Подписаться
+                        .form-mailing__response
+                    p.form-mailing__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
+                        a(href="#") условиями обработки персональных данных
+            svg.newsletter__img(width="712" height="831")
                 use(xlink:href="assets/images/sprite.svg#scheme")

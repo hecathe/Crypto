@@ -1,6 +1,7 @@
 .form-mailing {
     font-size: 16px;
     line-height: 20px;
+    color: $color-white;
 
     &__title {
         color: $color-white;
@@ -8,8 +9,6 @@
     }
 
     &__text {
-        font-size: 16px;
-        line-height: 20px;
         margin: 0;
     }
 
@@ -19,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 40px;
+        margin-top: 65px;
     }
 
     &__label {
@@ -98,7 +97,7 @@
         line-height: 17px;
         color: $color-grey;
         margin: 0;
-        margin-top: 20px;
+        margin-top: 30px;
 
         a {
             color: $color-white;
