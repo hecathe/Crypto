@@ -1,0 +1,49 @@
+.form {
+    &__item {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        @include input-reset;
+        border: 1px solid #BEBEBE;
+        box-sizing: border-box;
+        border-radius: 50px;
+        padding: 15px 20px;
+
+        &::placeholder {
+            color: $color-dark-grey;
+        }
+    }
+
+    &__input--comment {
+        max-height: 400px;
+        min-height: 100px;
+        resize: vertical;
+        border-radius: 20px;
+    }
+
+    &__submit-btn {
+        margin-top: 30px;
+    }
+
+    &__note {
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-note-text;
+        margin: 0;
+        margin-top: 10px;
+
+        a {
+            color: $color-main;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

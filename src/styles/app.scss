@@ -17,6 +17,8 @@ $color-background: #F8FBFD;
 $color-dark-grey: #333333;
 $color-mid-grey: #656565;
 $color-grey: #949494;
+$color-note-text: #A6A6A6;
+$color-superlightgrey: #F4F4F4;
 $color-grey2: #B9B5B5;
 $color-grey3: #8B8C96;
 $color-progress: #E9E9E9;
@@ -353,6 +355,14 @@ select {
 	padding-top: 100px;
 }
 
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
 .mb-60 {
 	margin-bottom: 60px;
 }
@@ -385,6 +395,8 @@ select {
 @import "./common/breadcrumbs.scss";
 @import "./common/news-card.scss";
 @import "./common/newsletter-form.scss";
+@import "./common/modal.scss";
+@import "./common/form.scss";
 
 //pages
 @import "./pages/index.scss";

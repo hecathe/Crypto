@@ -25,6 +25,76 @@ html
 
 			include components/footer.pug
 
+			//- .modal.modal-narrow
+				.modal__container
+					h2.modal__title.title-second.mb-30 Задать вопрос
+					button.modal__close(type="button" aria-label="Закрыть окно")
+						svg(width="32" heigh="32")
+							use(xlink:href="assets/images/sprite.svg#close")
+					.modal__content
+						form.modal__form.form
+							label.form__item
+								input.form__input(type="text" name="name" placeholder="Ваше имя")
+							label.form__item
+								input.form__input(type="email" name="email" placeholder="Email")
+							label.form__item
+								input.form__input(type="tel" name="tel" placeholder="Телефон")
+							label.form__item
+								textarea.form__input.form__input--comment(name="message" placeholder="Сообщение")
+							button.form__submit-btn.btn.btn-gradient(type="submit")
+								span Отправить
+							p.form__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
+								a(href="#") условиями обработки персональных данных
+
+			.modal.modal-wide
+				.modal__container
+					h2.modal__title.title-second.mb-20 Задать вопрос
+					button.modal__close(type="button" aria-label="Закрыть окно")
+						svg(width="32" heigh="32")
+							use(xlink:href="assets/images/sprite.svg#close")
+					.modal__content
+						.modal__tab-nav
+							button.modal__tab-btn(type="button" data-tab-id="ordering", data-tab-control="new-user") Новый пользователь
+							button.modal__tab-btn(type="button" data-tab-id="ordering", data-tab-control="login") Войти в аккаунт
+
+						form.modal__form.modal__form--intab.form(data-tab-id="ordering", data-tab-block="new-user")
+							label.form__item
+								input.form__input(type="text" name="name" placeholder="Ваше имя")
+							label.form__item
+								input.form__input(type="email" name="email" placeholder="Email")
+							label.form__item
+								input.form__input(type="tel" name="tel" placeholder="Телефон")
+							label.form__item
+								textarea.form__input.form__input--comment(name="message" placeholder="Сообщение")
+							button.form__submit-btn.btn.btn-gradient(type="submit")
+								span Отправить
+							p.form__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
+								a(href="#") условиями обработки персональных данных
+
+						form.modal__form.modal__form--intab.form(data-tab-id="ordering", data-tab-block="login")
+							label.form__item
+								input.form__input(type="tel" name="tel" placeholder="Номер телефона")
+							label.form__item
+								input.form__input(type="password" name="password" placeholder="Пароль")
+							button.form__submit-btn.btn.btn-gradient(type="submit")
+								span Войти
+
+						.modal__side.ordering
+							.ordering__caption Ваш заказ
+							.ordering__item
+								span Позиции в заказе:
+								ul.ordering__list
+									li.ordering__good ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)
+									li.ordering__good ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)
+							.ordering__item
+								span Предварительная сумма:
+								span 4 000 000 ₽
+							.ordering__bot Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки
+
+							
+			
+			.modal-overlay.active(aria-label="Закрыть окно")
+
 		//- https://github.com/jonathantneal/svg4everybody
 		script(src="assets/scripts/svg4everybody.min.js")
 
