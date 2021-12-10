@@ -47,11 +47,26 @@
     }
 
     &__tab-nav {
+        display: flex;
+        column-gap: 40px;
         grid-column: 1 / -1;
     }
 
     &__tab-btn {
+        display: flex;
+        color: $color-dark-grey;
         @include button-reset;
+        padding-bottom: 5px;
+
+        &.active {
+            font-weight: 500;
+            color: $color-main;
+            border-bottom: 1px solid $color-main;
+        }
+
+        &:hover {
+            color: $color-main;
+        }
     }
 
     &__form--intab {
@@ -66,6 +81,44 @@
         background-color: $color-superlightgrey;
         border-radius: 20px;
         padding: 40px;
+    }
+}
+
+.ordering {
+    &__caption {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 32px;
+        color: $color-dark-grey;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__term {
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-grey3;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: grid;
+        row-gap: 10px;
+        @include list-reset;
+    }
+
+    &__elem {
+        font-weight: 600;
+        color: $color-main;
+    }
+
+    &__bot {
+        border-top: 1px solid #C2C2C2;
+        padding-top: 30px;
+        margin-top: 30px;
     }
 }
 
