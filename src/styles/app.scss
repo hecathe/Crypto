@@ -115,6 +115,14 @@ select {
 	margin: 0;
 }
 
+.title-third {
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 32px;
+	color: $color-dark-grey;
+	margin: 0;
+}
+
 .title-wb {
 	display: flex;
 	justify-content: space-between;
@@ -363,6 +371,14 @@ select {
 	margin-bottom: 30px;
 }
 
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.mb-50 {
+	margin-bottom: 50px;
+}
+
 .mb-60 {
 	margin-bottom: 60px;
 }
@@ -397,6 +413,7 @@ select {
 @import "./common/newsletter-form.scss";
 @import "./common/modal.scss";
 @import "./common/form.scss";
+@import "./common/assort-block.scss";
 
 //pages
 @import "./pages/index.scss";
@@ -407,6 +424,11 @@ select {
 @import "./pages/news.scss";
 @import "./pages/news-item.scss";
 @import "./pages/faq.scss";
+@import "./pages/about-company.scss";
+@import "./pages/contacts.scss";
+@import "./pages/services.scss";
+@import "./pages/services-item.scss";
+@import "./pages/reviews.scss";
 
 @keyframes downup {
 	from {

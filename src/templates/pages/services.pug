@@ -1,0 +1,54 @@
+extends ../template
+
+block variables
+    - var title = 'Услуги'
+
+block content
+    main
+        // Услуги
+        section.services.mb-30
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Услуги
+
+            .services__container.container
+                ul.services__list
+                    li.services__item.features-card
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#hosting")
+                        .features-card__caption Хостинг
+                        .features-card__text-wrap
+                            p Cовременный майнинг на качественно новом уровне!<br> Если вы являетесь счастливым обладателем Майнеров или Майнинг ферм, при этом ваши мощности уже настолько большие, что вы не можете разместить свое оборудование у себя в квартире или доме, мы предлагаем своё помещение для майнинга.
+                        a.features-card__btn.btn.btn-ghost(href="#") Подробнее
+
+                    li.services__item.features-card
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#service")
+                        .features-card__caption Сервиcный центр
+                        .features-card__text-wrap
+                            p Наши сервисные центры производят ремонт всех видов майнеров (асиков) Antminer Bitmain любой сложности с гарантией.. Платы и чипы в наличии. По всем вопросам звоните / пишите, проконсультируем. Ремонт производим по сервисным мануалам завода Bitmain Antminer.
+                        a.features-card__btn.btn.btn-ghost(href="#") Подробнее
+
+                    li.services__item.features-card
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#container")
+                        .features-card__caption Контейнеры
+                        .features-card__text-wrap
+                            p Мобильная ферма – переоборудованный морской контейнер, укомплектованный стойками для майнингового оборудования, оснащенный системами электроснабжения, телекоммуникации, видеонаблюдения и климат-контроля, системами защитной автоматики и управления режимами. Также в контейнер устанавливается программное обеспечение управления асиками.
+                        a.features-card__btn.btn.btn-ghost(href="#") Подробнее
+                    
+                    li.services__item.features-card
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#firmware")
+                        .features-card__caption Прошивки
+                        .features-card__text-wrap
+                            p Мы занимаемся разработкой программного обеспечения под ASIC. С 2016 года мы разработали большое количество прошивок под таких производителей как: Bitmain, Innosilicon, Pangolinminer (MicroBT), Ebang, Baikal и некоторых других.
+                        a.features-card__btn.btn.btn-ghost(href="#") Подробнее
+
+
+        // Блок-подбор
+        include ../components/assort-block.pug
+
+        // About text
+        include ../components/about-block.pug 

@@ -18,7 +18,7 @@
       <header class="header">
         <div class="container">
           <nav class="header__nav">
-            <!-- временный style (когда логотип один в хэдэре)--><a class="header__logo" href="#"><img src="assets/images/svg/logo.svg" alt="Логотип"></a>
+            <!-- временный style (когда логотип один в хэдэре)--><a class="header__logo" href="/"><img src="assets/images/svg/logo.svg" alt="Логотип"></a>
             <ul class="header__list site-nav">
               <li class="site-nav__item"><a class="site-nav__link" href="#">Каталог</a></li>
               <li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
@@ -333,19 +333,19 @@
           </div>
         </section>
         <!-- О компании-->
-        <section class="about-company">
-          <svg class="about-company__img" width="398" height="386">
+        <section class="main-about">
+          <svg class="main-about__img" width="398" height="386">
             <use xlink:href="assets/images/sprite.svg#bg-1"></use>
           </svg>
-          <svg class="about-company__img-wave">
+          <svg class="main-about__img-wave">
             <use xlink:href="assets/images/sprite.svg#wave"></use>
           </svg>
           <div class="container">
-            <div class="about-company__text">
-              <h2 class="about-company__title title-second">О компании</h2>
-              <p>Мы - быстро развивающийся и современный магазин оборудования для майнинга. Исходя из своего опыта мы всегда поможем в выборе и подскажем клиенту что будет более подходящим вариантом покупки на заданный бюджет.</p><a class="about-company__btn btn btn-ghost btn-ghost_white" href="#">Подробнее о компании</a>
+            <div class="main-about__text">
+              <h2 class="main-about__title title-second">О компании</h2>
+              <p>Мы - быстро развивающийся и современный магазин оборудования для майнинга. Исходя из своего опыта мы всегда поможем в выборе и подскажем клиенту что будет более подходящим вариантом покупки на заданный бюджет.</p><a class="main-about__btn btn btn-ghost btn-ghost_white" href="#">Подробнее о компании</a>
             </div>
-            <ul class="about-company__static static-list">
+            <ul class="main-about__static static-list">
               <li class="static-list__item">
                 <div class="static-list__term">100+</div>
                 <div class="static-list__desc">тысяч довольных покупателей</div>
@@ -457,7 +457,7 @@
               <li class="footer__nav-item"><a class="footer__nav-link" href="#">Сравнение</a></li>
             </ul>
             <div class="footer__col"><a class="footer__tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
-              <button class="footer__btn btn btn-white" type="button"><span>Заказать звонок</span></button>
+              <button class="footer__btn btn btn-white" type="button" data-popup-trigger="writeus"><span>Заказать звонок</span></button>
             </div>
           </div>
           <div class="footer__bot">
@@ -468,6 +468,114 @@
           </div>
         </div>
       </footer>
+      <div class="modal modal-narrow" data-popup="question">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-30">Задать вопрос</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <form class="modal__form form">
+            <label class="form__item">
+              <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="email" name="email" placeholder="Email">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+            </label>
+            <label class="form__item">
+              <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+            </label>
+            <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+            <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal-narrow" data-popup="writeus">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-30">Написать нам</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <form class="modal__form form">
+            <label class="form__item">
+              <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="email" name="email" placeholder="Email">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+            </label>
+            <label class="form__item">
+              <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+            </label>
+            <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+            <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal-wide" data-popup="ordering-step-1">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-20">Оформление заказа</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <div class="modal__tab-nav">
+              <button class="modal__tab-btn" type="button" data-tab-id="ordering" data-tab-control="new-user">Новый пользователь</button>
+              <button class="modal__tab-btn" type="button" data-tab-id="ordering" data-tab-control="login">Войти в аккаунт</button>
+            </div>
+            <form class="modal__form modal__form--intab form" data-tab-id="ordering" data-tab-block="new-user">
+              <label class="form__item">
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="email" name="email" placeholder="Email">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label class="form__item">
+                <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+              </label>
+              <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+              <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+            </form>
+            <form class="modal__form modal__form--intab form" data-tab-id="ordering" data-tab-block="login">
+              <label class="form__item">
+                <input class="form__input" type="tel" name="tel" placeholder="Номер телефона">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="password" name="password" placeholder="Пароль">
+              </label>
+              <button class="form__submit-btn btn btn-gradient" type="submit"><span>Войти</span></button>
+            </form>
+            <div class="modal__side ordering">
+              <div class="ordering__caption">Ваш заказ</div>
+              <div class="ordering__item">
+                <div class="ordering__term">Позиции в заказе:</div>
+                <ul class="ordering__list">
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                </ul>
+              </div>
+              <div class="ordering__item">
+                <div class="ordering__term">Предварительная сумма:</div><span class="ordering__elem">4 000 000 ₽</span>
+              </div>
+              <div class="ordering__bot">Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-overlay" aria-label="Закрыть окно" data-close-popup></div>
     </div>
     <script src="assets/scripts/svg4everybody.min.js"></script>
     <script src="assets/scripts/imask.min.js"></script>

@@ -1,0 +1,34 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты'
+
+block content
+    main
+        // Контакты
+        section.contacts.mb-120
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Контакты
+            .contacts__container.container
+                .contacts__side
+                    ul.contacts__info.contacts-list
+                        li.contacts-list__item
+                            .contacts-list__term Адрес
+                            .contacts-list__desc г. Санкт-Петербург, улица Улица, д. 1, офис&nbsp;99
+                        li.contacts-list__item
+                            .contacts-list__term Станция метро
+                            .contacts-list__desc Невский проспект
+                        li.contacts-list__item
+                            .contacts-list__term Email
+                            a.contacts-list__desc(href="mailto:info@mail.ru") info@mail.ru
+                        li.contacts-list__item
+                            .contacts-list__term Телефон
+                            a.contacts-list__desc(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99
+                    button.contacts__btn.btn.btn-gradient(data-popup-trigger="writeus") 
+                        span Написать нам
+                
+                .contacts__map-wrap
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3fdfd87995f99670c7e8ba7232fe79d2ff923b9875d985952414a18f8705254&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                    

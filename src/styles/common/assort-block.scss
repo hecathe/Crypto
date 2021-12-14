@@ -1,0 +1,39 @@
+.assort-block {
+    &__wrap {
+        position: relative;
+        min-height: 500px;
+        color: $color-white;
+        background: $color-main-back;
+        border-radius: 20px;
+        padding: 70px;
+        padding-bottom: 85px;
+        overflow: hidden;
+    }
+
+    &__content {
+        max-width: 440px;
+
+        p {
+            margin: 0;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        color: $color-white;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+}

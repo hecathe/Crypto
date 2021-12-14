@@ -1,0 +1,48 @@
+extends ../template
+
+block variables
+    - var title = 'Услуги'
+
+block content
+    main
+        // Услуги
+        section.services-item.mb-120
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Услуги
+            
+            .services-item__container.container
+                ul.services-item__side.nav-side
+                    li.nav-side__item
+                        a.nav-side__link.active(href="#") Хостинг
+                    li.nav-side__item
+                        a.nav-side__link(href="#") Сервисный центр
+                    li.nav-side__item
+                        a.nav-side__link(href="#") Контейнеры
+                    li.nav-side__item
+                        a.nav-side__link(href="#") Прошивки
+
+                .services-item__content(data-tab-id="services", data-tab-block="services-1")
+                    .services-item__block.mb-40
+                        h2.services-item__title.title-second.mb-30 Хостинг
+                        .services-item__banner
+                            img(src="assets/images/services-1.jpg", alt="")
+                    .services-item__block
+                        h3.services-item__title.title-third.mb-30 Майнинг отель
+                        p Почему майнинг отель лучше чем домашняя ферма?
+                        ul.content-list
+                            li.content-list__item Вы забудете про нервы и время, которые тратятся на технические вопросы
+                            li.content-list__item Вам не надо брать помещение в аренду для майнинга
+                            li.content-list__item Никаких дополнительных комиссий, все уже входит в стоимость оплаты
+                            li.content-list__item Все автоматизировано, любые ошибки устраняются моментально
+                            li.content-list__item В случае серьезной поломки инженеры устраняют ее на месте в считанное время
+                            li.content-list__item Разгадываем только блоками, что дает максимальную доходность
+                        
+                        a.services-item__btn.btn.btn-ghost(href="#") Заказать услугу
+                
+        // Форма
+        include ../components/newsletter-form.pug
+
+        // About text
+        include ../components/about-block.pug 

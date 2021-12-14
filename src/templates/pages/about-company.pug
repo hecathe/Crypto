@@ -1,0 +1,45 @@
+extends ../template
+
+block variables
+    - var title = 'О компании'
+
+block content
+    main
+        // О компании
+        section.about-company.mb-30
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first О компании
+            
+            .about-company__container.container
+                .about-company__block
+                    .about-company__content
+                        svg.about-company__img(width="660" height="912")
+                            use(xlink:href="assets/images/sprite.svg#mining-block-crop")
+                        h2.about-company__title.title-second.mb-30 Компания Profitminer —  поставщик оборудования для майнинга в России и СНГ
+                        p Исходя из своего опыта мы всегда поможем в выборе и подскажем что будет более подходящим вариантом покупки на заданный бюджет. Вы можете обратиться к нам в с запросом о подборе, указав бюджет, стоимость электроэнергии у Вас, а также, какую криптовалюту Вы предпочитаете добывать. 
+                        p Мы занимаемся не только продажей асиков из наличия, но и занимаемся поставками из Китая.
+
+                        ul.about-company__static.static-list
+                            li.static-list__item
+                                .static-list__term 100+
+                                .static-list__desc тысяч довольных покупателей
+                            li.static-list__item
+                                .static-list__term 50
+                                .static-list__desc асиков в наличии
+                            li.static-list__item
+                                .static-list__term 94+
+                                .static-list__desc тысячи положительных отзывов
+                            li.static-list__item
+                                .static-list__term 13
+                                .static-list__desc складов в России
+
+        // Блок-подбор
+        include ../components/assort-block.pug
+
+        // Форма
+        include ../components/newsletter-form.pug
+
+        // About text
+        include ../components/about-block.pug 

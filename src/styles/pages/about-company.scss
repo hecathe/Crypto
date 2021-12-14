@@ -1,0 +1,39 @@
+.about-company {
+    &__block {
+        position: relative;
+        color: $color-white;
+        background: $color-main-back;
+        border-radius: 20px;
+        padding: 50px 70px;
+        padding-bottom: 85px;
+        overflow: hidden;
+    }
+
+    &__content {
+        max-width: 700px;
+
+        p {
+            margin: 0;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        color: $color-white;
+    }
+
+    &__img {
+        position: absolute;
+        right: -114px;
+        bottom: 21px;
+    }
+
+    &__static {
+        max-width: 486px;
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+    - var title = 'Услуги'
+
+block content
+    main
+        // Услуги
+        section.services-item.mb-120
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Услуги
+            
+            .services-item__container.container
+                ul.services-item__side.nav-side
+                    li.nav-side__item
+                        a.nav-side__link(href="#") Хостинг
+                    li.nav-side__item
+                        a.nav-side__link(href="#") Сервисный центр
+                    li.nav-side__item
+                        a.nav-side__link(href="#") Контейнеры
+                    li.nav-side__item
+                        a.nav-side__link.active(href="#") Прошивки
+
+                .services-item__content(data-tab-id="services", data-tab-block="services-4")
+                    .services-item__block.mb-40
+                        h2.services-item__title.title-second.mb-30 Прошивки
+                        .services-item__banner
+                            img(src="assets/images/services-4.jpg", alt="")
+                    .services-item__block.mb-50
+                        h3.services-item__title.title-third.mb-30 Прошивки для ASIC майнеров
+                        p Мы занимаемся разработкой программного обеспечения под ASIC. С 2016 года мы разработали большое количество прошивок под таких производителей как: Bitmain, Innosilicon, Pangolinminer (MicroBT), Ebang, Baikal и некоторых других.
+                        a.services-item__btn.btn.btn-ghost(href="#") Заказать услугу
+
+        // Форма
+        include ../components/newsletter-form.pug
+
+        // About text
+        include ../components/about-block.pug 
