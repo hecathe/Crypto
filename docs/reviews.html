@@ -99,6 +99,20 @@
             </div>
           </div>
           <div class="reviews__container container">
+            <div class="reviews__sort reviews-sort mb-50">
+              <div class="reviews-sort__item">
+                <input class="visually-hidden" id="review-asics" type="radio" name="types" value="asics" checked>
+                <label class="reviews-sort__btn" for="review-asics"><span>Майнинги ASIC</span><span class="reviews-sort__num">10</span></label>
+              </div>
+              <div class="reviews-sort__item">
+                <input class="visually-hidden" id="review-services" type="radio" name="types" value="asics">
+                <label class="reviews-sort__btn" for="review-services"><span>Услуги</span><span class="reviews-sort__num">20</span></label>
+              </div>
+              <div class="reviews-sort__item">
+                <input class="visually-hidden" id="review-products" type="radio" name="types" value="asics">
+                <label class="reviews-sort__btn" for="review-products"><span>Продукция</span><span class="reviews-sort__num">100</span></label>
+              </div>
+            </div>
             <ul class="reviews__list">
               <li class="reviews__item reviews-item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In proin et volutpat scelerisque orci semper adipiscing. Ultrices nunc nibh amet, molestie eu. Ac eget quis vel ornare sed mauris. </p>
@@ -274,7 +288,7 @@
               <label class="form__item">
                 <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
               </label>
-              <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+              <button class="form__submit-btn btn btn-gradient" type="submit" data-popup-trigger="ordering-step-2"><span>Отправить</span></button>
               <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
             </form>
             <form class="modal__form modal__form--intab form" data-tab-id="ordering" data-tab-block="login">
@@ -300,6 +314,65 @@
               </div>
               <div class="ordering__bot">Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки</div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-wide" data-popup="ordering-step-2">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-20">Оформление заказа</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <div class="modal__tab-nav">
+              <p>Ваши данные для оформления заказа:</p>
+            </div>
+            <form class="modal__form form">
+              <label class="form__item">
+                <input class="form__input" type="text" name="name" value="Иванов Иван" placeholder="Ваше имя">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="email" name="email" value="ivanov@mail.ru" placeholder="Email">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="tel" name="tel" value="+7 (999) 999-99-99" placeholder="Телефон">
+              </label>
+              <label class="form__item">
+                <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+              </label>
+              <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+              <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+            </form>
+            <div class="modal__side ordering">
+              <div class="ordering__caption">Ваш заказ</div>
+              <div class="ordering__item">
+                <div class="ordering__term">Позиции в заказе:</div>
+                <ul class="ordering__list">
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                </ul>
+              </div>
+              <div class="ordering__item">
+                <div class="ordering__term">Предварительная сумма:</div><span class="ordering__elem">4 000 000 ₽</span>
+              </div>
+              <div class="ordering__bot">Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-narrow modal-small" data-popup="logout">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-30">Вы действительно хотите выйти?</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__btn-wrap">
+            <button class="btn btn-violet"> <span>Отмена</span></button>
+            <button class="btn btn-ghost">Выйти</button>
           </div>
         </div>
       </div>

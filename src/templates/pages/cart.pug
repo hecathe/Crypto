@@ -1,0 +1,83 @@
+extends ../template
+
+block variables
+    - var title = 'Корзина'
+
+block content
+    main
+        // Корзина
+        section.cart.mb-120
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Корзина
+            
+            .container
+                .cart__block
+                    ul.cart__list.cart-list
+                        li.cart-list__head-row
+                            .cart-list__head-cell.cart-list__cell--image
+                            .cart-list__head-cell.cart-list__cell--name Наименование
+                            .cart-list__head-cell Цена
+                            .cart-list__head-cell Количество
+                            .cart-list__head-cell Сумма
+                            .cart-list__head-cell
+                        li.cart-list__row
+                            .cart-list__cell.cart-list__cell--image
+                                img(src="assets/images/whatsminer-m30s.png", alt="")
+                            .cart-list__cell.cart-list__cell--name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                            .cart-list__cell 1 000 000 ₽
+                            .cart-list__cell.cart-list__cell--crease
+                                button.cart-list__btn
+                                    <svg width="12" height="1" viewBox="0 0 12 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect y="1" width="0.999999" height="12" rx="0.5" transform="rotate(-90 0 1)" fill="#180269"/>
+                                    </svg>
+                                input(type="number" min="1" max="9999" value="2" placeholder="1")
+                                button.cart-list__btn
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.375 6.375C0.167893 6.375 9.05292e-09 6.20711 0 6C-9.05292e-09 5.79289 0.167893 5.625 0.375 5.625L11.625 5.625C11.8321 5.625 12 5.79289 12 6C12 6.20711 11.8321 6.375 11.625 6.375L0.375 6.375Z" fill="#180269"/>
+                                        <path d="M6.375 11.625C6.375 11.8321 6.20711 12 6 12C5.79289 12 5.625 11.8321 5.625 11.625L5.625 0.375C5.625 0.167893 5.79289 1.81058e-08 6 0C6.20711 -1.81058e-08 6.375 0.167893 6.375 0.375L6.375 11.625Z" fill="#180269"/>
+                                    </svg>
+                            .cart-list__cell 2 000 000 ₽
+                            .cart-list__cell.cart-list__cell--btns
+                                button.cart-list__btn.cart-list__btn--fav
+                                    svg(width="15" height="15")
+                                        use(xlink:href="assets/images/sprite.svg#heart-outlined")
+                                    span В избранное
+                                button.cart-list__btn.cart-list__btn--delete
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#delete")
+                                    span Удалить
+                        li.cart-list__row
+                            .cart-list__cell.cart-list__cell--image
+                                img(src="assets/images/whatsminer-m30s.png", alt="")
+                            .cart-list__cell.cart-list__cell--name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                            .cart-list__cell 1 000 000 ₽
+                            .cart-list__cell.cart-list__cell--crease
+                                button.cart-list__btn
+                                    <svg width="12" height="1" viewBox="0 0 12 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect y="1" width="0.999999" height="12" rx="0.5" transform="rotate(-90 0 1)" fill="#180269"/>
+                                    </svg>
+                                input(type="number" min="1" max="9999" value="2" placeholder="1")
+                                button.cart-list__btn
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.375 6.375C0.167893 6.375 9.05292e-09 6.20711 0 6C-9.05292e-09 5.79289 0.167893 5.625 0.375 5.625L11.625 5.625C11.8321 5.625 12 5.79289 12 6C12 6.20711 11.8321 6.375 11.625 6.375L0.375 6.375Z" fill="#180269"/>
+                                        <path d="M6.375 11.625C6.375 11.8321 6.20711 12 6 12C5.79289 12 5.625 11.8321 5.625 11.625L5.625 0.375C5.625 0.167893 5.79289 1.81058e-08 6 0C6.20711 -1.81058e-08 6.375 0.167893 6.375 0.375L6.375 11.625Z" fill="#180269"/>
+                                    </svg>
+                            .cart-list__cell 2 000 000 ₽
+                            .cart-list__cell.cart-list__cell--btns
+                                button.cart-list__btn.cart-list__btn--fav
+                                    svg(width="15" height="15")
+                                        use(xlink:href="assets/images/sprite.svg#heart-outlined")
+                                    span В избранное
+                                button.cart-list__btn.cart-list__btn--delete
+                                    svg(width="16" height="16")
+                                        use(xlink:href="assets/images/sprite.svg#delete")
+                                    span Удалить
+
+                    .cart__bot
+                        .cart__total
+                            span.cart__total-caption Итого
+                            span.cart__total-sum 4 000 000 ₽
+                        button.cart__btn.btn.btn-gradient(data-popup-trigger="ordering-step-1")
+                            span Оформить заявку

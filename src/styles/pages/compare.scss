@@ -1,0 +1,99 @@
+.compare {
+    &__content {
+        background: $color-white;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 50px;
+        padding-bottom: 20px;
+    }
+    
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__radios {
+        display: flex;
+        column-gap: 10px;
+
+        input:checked + label {
+            color: $color-white;
+            background: $color-main;
+        }
+    }
+
+    &__btn {
+        padding: 10px 20px;
+        transition: background 200ms ease-in-out;
+
+        svg {
+            fill: none;
+        }
+
+        &:hover {
+            background: $color-main;
+
+            svg {
+                --icon-color: #{$color-white};
+            }
+        }
+    }
+
+    &__block {
+        position: relative;
+        min-height: 300px;
+
+        svg {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+.compare-table {
+    @include list-reset;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $color-grey4;
+        padding: 30px 0;
+
+        &:first-child, &:last-child {
+            border: none;
+        }
+
+        &:first-child {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__head-cell {
+        width: 200px;
+        color: $color-grey3;
+        margin-right: 50px;
+    }
+
+    &__cell,
+    &__name-cell {
+        width: 240px;
+        margin-right: 54px;
+    }
+
+    &__cell {
+        font-weight: 500;
+        color: $color-main;
+
+        img {
+            max-width: 144px;
+        }
+    }
+
+    &__name-cell {
+        font-weight: 600;
+        color: $color-dark-grey;
+    }
+}

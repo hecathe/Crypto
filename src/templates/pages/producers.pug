@@ -1,0 +1,43 @@
+extends ../template
+
+block variables
+    - var title = 'Производители'
+
+block content
+    main
+        // Производители
+        section.producers.mb-50
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Производители
+            .container
+                .producers__block.block
+                    .block__top.block__top--mw-700
+                        h3.block__title.title-third.mb-20 Производители оборудования для майнинга
+                        p С помощью нашего магазина вы можете купить оборудование для майнинга криптовалют, от таких производителей как: <b>Bitmain, Innosilicon, Baikal, Ibelink, Pangolinminer, Canaan</b> и некоторых других.
+                        a.block__btn.btn.btn-gradient(href="#")
+                            span Перейти в каталог
+                    ul.block__list
+                        li.block__item
+                            img(src="assets/images/bitmain.png", alt="")
+                        li.block__item
+                            img(src="assets/images/microbt.png", alt="")
+                        li.block__item
+                            img(src="assets/images/baikal.png", alt="")
+                        li.block__item
+                            img(src="assets/images/innosilicon.png", alt="")
+                        li.block__item
+                            img(src="assets/images/ibeilink.png", alt="")
+                        li.block__item
+                            img(src="assets/images/whatsminer.png", alt="")
+                        li.block__item
+                            img(src="assets/images/canaan.png", alt="")
+                        li.block__item
+                            img(src="assets/images/bitfury.png", alt="")
+
+        // Блок-подбор
+        include ../components/assort-block.pug
+
+        // About text
+        include ../components/about-block.pug 

@@ -22,8 +22,11 @@ $color-superlightgrey: #F4F4F4;
 $color-grey2: #B9B5B5;
 $color-grey3: #8B8C96;
 $color-progress: #E9E9E9;
+$color-grey4: #EDEBF8;
 $color-bb: #C6C6C6;
+$color-light-text: #C5C5C5;
 $color-white: #FFFFFF;
+$color-red: #D81B1B;
 
 @import "./common/fonts.scss";
 @import "./common/normalize";
@@ -238,6 +241,30 @@ select {
 	}
 }
 
+.btn-violet {
+	color: $color-white;
+	background-color: $color-main;
+
+	&::after {
+		position: absolute;
+		content: '';
+		height: 100%;
+		left: 0;
+		width: 0;
+		background: linear-gradient(93.17deg, #1FA2FF 0.68%, #12D8FA 51.27%, #A6FFCB 98.79%);
+		transition: width 250ms ease-in-out;
+		z-index: 1;
+	}
+	
+	&:hover {
+		color: $color-white;
+
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
 .btn-ghost {
 	border: 2px solid $color-main;
 	color: $color-main;
@@ -414,6 +441,7 @@ select {
 @import "./common/modal.scss";
 @import "./common/form.scss";
 @import "./common/assort-block.scss";
+@import "./common/features-card.scss";
 
 //pages
 @import "./pages/index.scss";
@@ -429,6 +457,14 @@ select {
 @import "./pages/services.scss";
 @import "./pages/services-item.scss";
 @import "./pages/reviews.scss";
+@import "./pages/producers.scss";
+@import "./pages/shipping.scss";
+@import "./pages/compare.scss";
+@import "./pages/cart.scss";
+
+@import "./pages/lk-registration.scss";
+@import "./pages/lk-login.scss";
+@import "./pages/lk-account.scss";
 
 @keyframes downup {
 	from {

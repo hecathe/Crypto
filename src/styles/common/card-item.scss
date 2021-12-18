@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 428px;
+    min-height: 400px;
     transition: min-width 150ms ease-in-out;
 
     &:hover {
@@ -23,7 +23,6 @@
         }
 
         .card__info {
-            height: auto;
             visibility: visible;
         }
 
@@ -127,9 +126,10 @@
     }
 
     &__info {
+        position: absolute;
+        top: 95px;
         display: grid;
         row-gap: 15px;
-        height: 0;
         @include list-reset;
         visibility: hidden;
         z-index: 1;

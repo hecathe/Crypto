@@ -13,6 +13,32 @@ block content
                     h1.heading__title.title-first Отзывы
 
             .reviews__container.container
+                .reviews__sort.reviews-sort.mb-50
+                    .reviews-sort__item
+                        input.visually-hidden(id="review-asics" type="radio" name="types" value="asics" checked)
+                        label.reviews-sort__btn(for="review-asics")
+                            span Майнинги ASIC
+                            span.reviews-sort__num 10
+                    .reviews-sort__item
+                        input.visually-hidden(id="review-services" type="radio" name="types" value="asics")
+                        label.reviews-sort__btn(for="review-services")
+                            span Услуги
+                            span.reviews-sort__num 20
+                    .reviews-sort__item
+                        input.visually-hidden(id="review-products" type="radio" name="types" value="asics")
+                        label.reviews-sort__btn(for="review-products")
+                            span Продукция
+                            span.reviews-sort__num 100
+
+                    //- button.reviews-sort__btn.active
+                    //-     span Майнинги ASIC
+                    //-     span.reviews-sort__num 10
+                    //- button.reviews-sort__btn
+                    //-     span Услуги
+                    //-     span.reviews-sort__num 20
+                    //- button.reviews-sort__btn
+                    //-     span Продукция
+                    //-     span.reviews-sort__num 100
                 ul.reviews__list
                     li.reviews__item.reviews-item
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In proin et volutpat scelerisque orci semper adipiscing. Ultrices nunc nibh amet, molestie eu. Ac eget quis vel ornare sed mauris. 

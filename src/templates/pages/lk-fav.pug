@@ -1,0 +1,38 @@
+extends ../template
+
+block variables
+    - var title = 'Личные данные'
+
+block content
+    main
+        section.account.mb-100
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Личный кабинет
+
+            .container
+                .account__content.account__content--col-30
+                    .account__side
+                        ul.account__nav.account-nav
+                            li.account-nav__item
+                                a.account-nav__link(href="#") Личные данные
+                            li.account-nav__item
+                                a.account-nav__link(href="#") Мои заказы
+                            li.account-nav__item
+                                a.account-nav__link.active(href="#") Избранное
+                        button.account__logout(data-popup-trigger="logout") Выйти из личного кабинета
+                    .account__block
+                        ul.account__fav-list.fav-list
+                            li.fav-list__item
+                                include ../components/card-item.pug
+                            li.fav-list__item
+                                include ../components/card-item.pug
+                            li.fav-list__item
+                                include ../components/card-item.pug
+                            li.fav-list__item
+                                include ../components/card-item.pug
+                            li.fav-list__item
+                                include ../components/card-item.pug
+                            li.fav-list__item
+                                include ../components/card-item.pug

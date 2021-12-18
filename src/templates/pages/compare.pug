@@ -1,0 +1,68 @@
+extends ../template
+
+block variables
+    - var title = 'Сравнение товаров'
+
+block content
+    main
+        // Сравнение товаров
+        section.compare.mb-30
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Сравнение товаров
+
+            .container
+                .compare__content
+                    .compare__nav
+                        .compare__radios
+                            .compare__radios
+                                input.visually-hidden#dif(type="radio", name="characters" value="dif" checked)
+                                label.compare__btn.btn.btn-ghost(for="dif") Различающиеся характеристики
+                            .compare__radios
+                                input.visually-hidden#all(type="radio", name="characters" value="all")
+                                label.compare__btn.btn.btn-ghost(for="all") Все характеристики
+                        button.compare__btn.btn.btn-ghost
+                            svg(width="16" height="16")
+                                use(xlink:href="assets/images/sprite.svg#trash")
+                            span Очистить список сравнения
+                    
+                    .compare__table-wrap
+                        ul.compare__table.compare-table
+                            li.compare-table__row
+                                .compare-table__head-cell
+                                .compare-table__cell
+                                    img(src="assets/images/whatsminer-m30s.png", alt="")
+                                .compare-table__cell
+                                    img(src="assets/images/whatsminer-m30s.png", alt="")
+                            li.compare-table__row
+                                .compare-table__head-cell Наименование
+                                .compare-table__name-cell ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                .compare-table__name-cell ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                            li.compare-table__row
+                                .compare-table__head-cell Стоимость
+                                .compare-table__cell 1 000 000 ₽
+                                .compare-table__cell 1 000 000 ₽
+                            li.compare-table__row
+                                .compare-table__head-cell Алгоритм:
+                                .compare-table__cell Sha-256
+                                .compare-table__cell Sha-255
+                            li.compare-table__row
+                                .compare-table__head-cell Валюта:
+                                .compare-table__cell Bitcoin (BTC) / BitcoinCash (BCH)
+                                .compare-table__cell Bitcoin (BTC) / BitcoinCash (BCH)
+                            li.compare-table__row
+                                .compare-table__head-cell Хэшрейт
+                                .compare-table__cell 100 TH/s
+                                .compare-table__cell 100 TH/s
+                            li.compare-table__row
+                                .compare-table__head-cell Энергопотребление
+                                .compare-table__cell 3100 W
+                                .compare-table__cell 3100 W
+                            li.compare-table__row
+                                .compare-table__head-cell Производитель
+                                .compare-table__cell Bitmain
+                                .compare-table__cell Bitmain
+
+        // Блок-подбор
+        include ../components/assort-block.pug

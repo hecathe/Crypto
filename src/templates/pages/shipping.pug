@@ -1,0 +1,85 @@
+extends ../template
+
+block variables
+    - var title = 'Доставка и оплата'
+
+block content
+    main
+        // Доставка и оплата
+        section.shipping.mb-60
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Доставка и оплата
+
+            .shipping__container.container
+                h2.shipping__title.title-second.mb-30 Доставка
+                ul.shipping__list
+                    li.shipping__item.features-card
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#map-location")
+                        .features-card__caption Самовывоз
+                        .features-card__text-wrap
+                            p Самовывоз осуществляется только в г. Санкт-Петербург
+                            p Если Вы желаете самостоятельно забрать свой заказ, то Вам необходимо согласовать дату и время самовывоза с представителем нашего магазина. Для этого оформите заказ на сайте или сообщите менеджеру в мессенджерах какое оборудование и в каком количестве Вы планируете покупать, дату и время планируемого приезда, а также, укажите контактный номер и имя. 
+                        a.features-card__btn.btn.btn-ghost(href="#") Подробнее
+
+                    li.shipping__item.features-card
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#delivery-truck")
+                        .features-card__caption Доставка транспортной компанией
+                        .features-card__text-wrap
+                            p Мы работаем с проверенными транспортными компаниями, и можем доставить ваш заказ в течение нескольких дней. Доставка по РФ и СНГ доступна практически на все направления.
+                        a.features-card__btn.btn.btn-ghost(href="#") Подробнее
+
+        section.payment.mb-120
+            .container
+                h2.payment__title.title-second.mb-30 Оплата
+                .payment__block.features-card
+                    .features-card__wrap
+                        svg.features-card__icon(width="70" height="70")
+                            use(xlink:href="assets/images/sprite.svg#payment")
+                        .features-card__caption Оплата
+                        .features-card__text-wrap
+                            p Самовывоз осуществляется только в г. Санкт-Петербург
+                            p Если Вы желаете самостоятельно забрать свой заказ, то Вам необходимо согласовать дату и время самовывоза с представителем нашего магазина. Для этого оформите заказ на сайте или сообщите менеджеру в мессенджерах какое оборудование и в каком количестве Вы планируете покупать, дату и время планируемого приезда, а также, укажите контактный номер и имя. 
+                    .features-card__wrap.payment__wrap
+                        ul.payment-list
+                            li.payment-list__item
+                                svg(width="65" height="39")
+                                    use(xlink:href="assets/images/sprite.svg#master-card")
+                            li.payment-list__item
+                                svg(width="71" height="28")
+                                    use(xlink:href="assets/images/sprite.svg#googlePay")
+                            li.payment-list__item
+                                svg(width="38" height="36")
+                                    use(xlink:href="assets/images/sprite.svg#yandex")
+                            li.payment-list__item
+                                svg(width="41" height="43")
+                                    use(xlink:href="assets/images/sprite.svg#qiwi")
+                        ul.payment-list
+                            li.payment-list__item
+                                svg(width="63" height="38")
+                                    use(xlink:href="assets/images/sprite.svg#maestro")
+                            li.payment-list__item
+                                svg(width="72" height="42")
+                                    use(xlink:href="assets/images/sprite.svg#verified-visa")
+                            li.payment-list__item
+                                svg(width="53" height="15")
+                                    use(xlink:href="assets/images/sprite.svg#mir")
+                        ul.payment-list
+                            li.payment-list__item
+                                svg(width="68" height="21")
+                                    use(xlink:href="assets/images/sprite.svg#visa")
+                            li.payment-list__item
+                                svg(width="77" height="19")
+                                    use(xlink:href="assets/images/sprite.svg#paypal")
+                            li.payment-list__item
+                                svg(width="88" height="25")
+                                    use(xlink:href="assets/images/sprite.svg#paypass")
+
+        // Форма
+        include ../components/newsletter-form.pug
+
+        // About text
+        include ../components/about-block.pug 

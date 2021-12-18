@@ -233,25 +233,32 @@ const overlay = document.querySelector(".modal-overlay");
 
 modalTriggers.forEach((modalTrigger) => {
     const triggerData = modalTrigger.dataset.popupTrigger;
-    const modal = document.querySelector(`[data-popup="${triggerData}"]`);
-    const modalData = modal.dataset.popup;
+    // const modal = document.querySelector(`[data-popup="${triggerData}"]`);
+    const modals = document.querySelectorAll(`[data-popup]`);
 
     modalTrigger.addEventListener("click", function (event) {
         event.preventDefault();
-        
-        if (triggerData === modalData) {
-            openPopup(modal);
-        }
 
-        if (modal.classList.contains(activeClass)) {
-            closePopup(modal);
-        }
+        modals.forEach((modal) => {
+            const modalData = modal.dataset.popup;
+
+            modal.classList.remove(activeClass);
+
+            if (triggerData === modalData) {
+                openPopup(modal);
+            }
+
+            if (modal.classList.contains(activeClass)) {
+                closePopup(modal);
+            }
+        })
     });
 });
 
 function openPopup(elem) {
     elem.classList.add(activeClass);
     overlay.classList.add(activeClass);
+    body.style.overflowY = "hidden";
 }
 
 function closePopup(elem) {
@@ -260,11 +267,13 @@ function closePopup(elem) {
     closePopupBtn.addEventListener("click", function () {
         elem.classList.remove(activeClass);
         overlay.classList.remove(activeClass);
+        body.removeAttribute("style");
     });
 
     overlay.addEventListener("click", function () {
         elem.classList.remove(activeClass);
         overlay.classList.remove(activeClass);
+        body.removeAttribute("style");
     });
 }
 

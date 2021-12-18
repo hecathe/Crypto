@@ -1,0 +1,27 @@
+extends ../template
+
+block variables
+    - var title = 'Сравнение товаров'
+
+block content
+    main
+        // Сравнение товаров
+        section.compare.mb-30
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Сравнение товаров
+
+            .container
+                .compare__block.block
+                    .block__top.block__top--mw-520
+                        h3.block__title.title-third.mb-30 Список сравнения пуст
+                        p Добавляйте сюда товары, чтобы сравнить их характеристики. Так выбрать лучший станет проще!
+                        a.block__btn.btn.btn-gradient(href="#")
+                            span Перейти в каталог
+                        
+                    svg.block__img(width="364" height="300")
+                        use(xlink:href="assets/images/sprite.svg#compare")
+
+        // Блок-подбор
+        include ../components/assort-block.pug

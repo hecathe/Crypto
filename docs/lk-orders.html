@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Личные данные</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="header__nav">
+            <!-- временный style (когда логотип один в хэдэре)--><a class="header__logo" href="/"><img src="assets/images/svg/logo.svg" alt="Логотип"></a>
+            <ul class="header__list site-nav">
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Каталог</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Новости</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Услуги</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">FAQ</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Отзывы</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Производители</a></li>
+              <li class="site-nav__item"><a class="site-nav__link" href="#">Контакты</a></li>
+            </ul>
+            <ul class="header__list user-nav">
+              <li class="user-nav__item">
+                <form class="search" action="#">
+                  <label class="user-nav__link btn btn-circle">
+                    <input type="search"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4489 12.5581L11.4176 12.5268L11.3827 12.554C10.2263 13.4583 8.80066 13.9498 7.33267 13.9501C3.68446 13.9501 0.716016 10.9816 0.716016 7.33342C0.716016 3.6852 3.68446 0.716748 7.33268 0.716748C10.9809 0.716748 13.9494 3.6852 13.9494 7.3334C13.949 8.80177 13.4573 10.2278 12.5525 11.3843L12.5252 11.4191L12.5565 11.4504L16.1845 15.0784L15.0768 16.186L11.4489 12.5581ZM12.3827 7.33342C12.3827 4.5483 10.1178 2.28341 7.33268 2.28341C4.54757 2.28341 2.28268 4.5483 2.28268 7.33342C2.28268 10.1185 4.54757 12.3834 7.33268 12.3834C10.1178 12.3834 12.3827 10.1185 12.3827 7.33342Z" fill="url(#paint_linear_187:21504)" stroke="url(#paint_linear_187:21504)" stroke-width="0.1"/>
+<defs>
+<linearGradient id="paint_linear_187:21504" x1="2.65625" y1="4.24766" x2="17.8228" y2="5.04092" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="0.515625" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF"/>
+</linearGradient>
+</defs>
+</svg>
+                  </label>
+                </form>
+              </li>
+              <li class="user-nav__item"><a class="user-nav__link btn btn-circle" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.7676 14.9141C16.3992 14.0414 15.8645 13.2486 15.1934 12.5801C14.5243 11.9096 13.7317 11.375 12.8594 11.0059C12.8516 11.002 12.8438 11 12.836 10.9961C14.0528 10.1172 14.8438 8.68555 14.8438 7.07031C14.8438 4.39453 12.6758 2.22656 10 2.22656C7.32427 2.22656 5.1563 4.39453 5.1563 7.07031C5.1563 8.68555 5.94731 10.1172 7.16411 10.998C7.1563 11.002 7.14849 11.0039 7.14067 11.0078C6.26567 11.377 5.48052 11.9063 4.80669 12.582C4.1362 13.2511 3.60162 14.0437 3.23247 14.916C2.86982 15.77 2.67423 16.6856 2.6563 17.6133C2.65578 17.6341 2.65943 17.6549 2.66705 17.6743C2.67467 17.6937 2.6861 17.7114 2.70066 17.7263C2.71522 17.7412 2.73262 17.7531 2.75184 17.7612C2.77105 17.7693 2.7917 17.7734 2.81255 17.7734H3.98442C4.07036 17.7734 4.13872 17.7051 4.14067 17.6211C4.17974 16.1133 4.7852 14.7012 5.85552 13.6309C6.96294 12.5234 8.43364 11.9141 10 11.9141C11.5665 11.9141 13.0372 12.5234 14.1446 13.6309C15.2149 14.7012 15.8204 16.1133 15.8594 17.6211C15.8614 17.707 15.9297 17.7734 16.0157 17.7734H17.1875C17.2084 17.7734 17.229 17.7693 17.2483 17.7612C17.2675 17.7531 17.2849 17.7412 17.2994 17.7263C17.314 17.7114 17.3254 17.6937 17.333 17.6743C17.3407 17.6549 17.3443 17.6341 17.3438 17.6133C17.3243 16.6797 17.1309 15.7715 16.7676 14.9141V14.9141ZM10 10.4297C9.10356 10.4297 8.25981 10.0801 7.62505 9.44531C6.99028 8.81055 6.64067 7.9668 6.64067 7.07031C6.64067 6.17383 6.99028 5.33008 7.62505 4.69531C8.25981 4.06055 9.10356 3.71094 10 3.71094C10.8965 3.71094 11.7403 4.06055 12.375 4.69531C13.0098 5.33008 13.3594 6.17383 13.3594 7.07031C13.3594 7.9668 13.0098 8.81055 12.375 9.44531C11.7403 10.0801 10.8965 10.4297 10 10.4297Z" fill="url(#paint0_linear_187:21504)"/>
+<defs>
+<linearGradient id="paint0_linear_187:21504" x1="2.65625" y1="4.24766" x2="17.8228" y2="5.04092" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="0.515625" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF"/>
+</linearGradient>
+</defs>
+</svg></a></li>
+              <li class="user-nav__item"><a class="user-nav__link btn btn-circle" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.125 2.5C2.95924 2.5 2.80027 2.56585 2.68306 2.68306C2.56585 2.80027 2.5 2.95924 2.5 3.125C2.5 3.29076 2.56585 3.44973 2.68306 3.56694C2.80027 3.68415 2.95924 3.75 3.125 3.75H3.4325C3.56821 3.75023 3.70016 3.79464 3.80841 3.8765C3.91666 3.95836 3.99531 4.07323 4.0325 4.20375L6.015 11.1413C6.12713 11.5328 6.36368 11.8771 6.68888 12.1223C7.01408 12.3674 7.41025 12.5 7.8175 12.5H13.5287C13.9036 12.5001 14.2698 12.3878 14.5802 12.1777C14.8905 11.9676 15.1308 11.6693 15.27 11.3212L17.1125 6.71375C17.1882 6.52416 17.2164 6.3189 17.1945 6.11591C17.1726 5.91293 17.1013 5.7184 16.9869 5.54932C16.8724 5.38025 16.7183 5.24178 16.538 5.14602C16.3577 5.05026 16.1567 5.00013 15.9525 5H5.56L5.23375 3.86C5.12191 3.46847 4.88564 3.12398 4.56068 2.87862C4.23571 2.63326 3.83969 2.50036 3.4325 2.5H3.125ZM7.2175 10.7963L5.9175 6.25H15.9513L14.1087 10.8575C14.0623 10.9734 13.9823 11.0727 13.8789 11.1426C13.7755 11.2126 13.6536 11.25 13.5287 11.25H7.8175C7.68179 11.2498 7.54984 11.2054 7.44159 11.1235C7.33334 11.0416 7.25469 10.9268 7.2175 10.7963Z" fill="url(#paint0_linear_187:21507)"/>
+<path d="M8.125 17.5C8.37123 17.5 8.61505 17.4515 8.84253 17.3573C9.07002 17.263 9.27672 17.1249 9.45083 16.9508C9.62494 16.7767 9.76305 16.57 9.85727 16.3425C9.9515 16.115 10 15.8712 10 15.625C10 15.3788 9.9515 15.135 9.85727 14.9075C9.76305 14.68 9.62494 14.4733 9.45083 14.2992C9.27672 14.1251 9.07002 13.987 8.84253 13.8927C8.61505 13.7985 8.37123 13.75 8.125 13.75C7.62772 13.75 7.15081 13.9475 6.79917 14.2992C6.44754 14.6508 6.25 15.1277 6.25 15.625C6.25 16.1223 6.44754 16.5992 6.79917 16.9508C7.15081 17.3025 7.62772 17.5 8.125 17.5ZM8.125 16.25C7.95924 16.25 7.80027 16.1842 7.68306 16.0669C7.56585 15.9497 7.5 15.7908 7.5 15.625C7.5 15.4592 7.56585 15.3003 7.68306 15.1831C7.80027 15.0658 7.95924 15 8.125 15C8.29076 15 8.44973 15.0658 8.56694 15.1831C8.68415 15.3003 8.75 15.4592 8.75 15.625C8.75 15.7908 8.68415 15.9497 8.56694 16.0669C8.44973 16.1842 8.29076 16.25 8.125 16.25Z" fill="url(#paint1_linear_187:21507)"/>
+<path d="M13.125 17.5C13.3712 17.5 13.615 17.4515 13.8425 17.3573C14.07 17.263 14.2767 17.1249 14.4508 16.9508C14.6249 16.7767 14.763 16.57 14.8573 16.3425C14.9515 16.115 15 15.8712 15 15.625C15 15.3788 14.9515 15.135 14.8573 14.9075C14.763 14.68 14.6249 14.4733 14.4508 14.2992C14.2767 14.1251 14.07 13.987 13.8425 13.8927C13.615 13.7985 13.3712 13.75 13.125 13.75C12.6277 13.75 12.1508 13.9475 11.7992 14.2992C11.4475 14.6508 11.25 15.1277 11.25 15.625C11.25 16.1223 11.4475 16.5992 11.7992 16.9508C12.1508 17.3025 12.6277 17.5 13.125 17.5ZM13.125 16.25C12.9592 16.25 12.8003 16.1842 12.6831 16.0669C12.5658 15.9497 12.5 15.7908 12.5 15.625C12.5 15.4592 12.5658 15.3003 12.6831 15.1831C12.8003 15.0658 12.9592 15 13.125 15C13.2908 15 13.4497 15.0658 13.5669 15.1831C13.6842 15.3003 13.75 15.4592 13.75 15.625C13.75 15.7908 13.6842 15.9497 13.5669 16.0669C13.4497 16.1842 13.2908 16.25 13.125 16.25Z" fill="url(#paint2_linear_187:21507)"/>
+<defs>
+<linearGradient id="paint0_linear_187:21507" x1="2.5" y1="3.8" x2="17.6224" y2="5.03087" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="0.515625" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_187:21507" x1="6.25" y1="14.2375" x2="10.121" y2="14.4518" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="0.515625" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_187:21507" x1="11.25" y1="14.2375" x2="15.121" y2="14.4518" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="0.515625" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF"/>
+</linearGradient>
+</defs>
+</svg></a></li>
+              <li class="user-nav__item">
+                <button class="user-nav__link toggle btn btn-circle" href="#" aria-label="Меню"><span></span></button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section class="account mb-120">
+          <div class="heading pt-100 mb-60">
+            <div class="container">
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+                <li class="breadcrumbs__item"><span>/</span></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current-link">N-ый уровень</span></li>
+              </ul>
+              <h1 class="heading__title title-first">Личный кабинет</h1>
+            </div>
+          </div>
+          <div class="container">
+            <div class="account__content">
+              <div class="account__side">
+                <ul class="account__nav account-nav">
+                  <li class="account-nav__item"><a class="account-nav__link" href="#">Личные данные</a></li>
+                  <li class="account-nav__item"><a class="account-nav__link active" href="#">Мои заказы</a></li>
+                  <li class="account-nav__item"><a class="account-nav__link" href="#">Избранное</a></li>
+                </ul>
+                <button class="account__logout" data-popup-trigger="logout">Выйти из личного кабинета</button>
+              </div>
+              <div class="account__block">
+                <div class="account__orders orders mb-60">
+                  <div class="orders__caption mb-20">Текущие заказы</div>
+                  <div class="orders__item order-item mb-30">
+                    <div class="order-item__top">
+                      <div class="order-item__info"><span>Заказ от 3 ноября 2021</span><span class="order-item__small">29837567871</span></div>
+                      <div class="order-item__wrap">
+                        <button class="order-item__btn-cancel">Отменить заказ</button>
+                        <div class="order-item__info"><span>3 000 000 ₽</span><span class="order-item__small">Заказ собирается</span></div>
+                      </div>
+                    </div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">1шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">100шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                  </div>
+                  <div class="orders__item order-item">
+                    <div class="order-item__top">
+                      <div class="order-item__info"><span>Заказ от 3 ноября 2021</span><span class="order-item__small">29837567871</span></div>
+                      <div class="order-item__wrap">
+                        <button class="order-item__btn-cancel">Отменить заказ</button>
+                        <div class="order-item__info"><span>3 000 000 ₽</span><span class="order-item__small">Заказ собирается</span></div>
+                      </div>
+                    </div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">1шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">100шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 10000 TH/S</span><span class="order-item__quantity order-item__small">10шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                  </div>
+                </div>
+                <div class="account__orders orders">
+                  <button class="orders__caption-btn mb-30"><span>История заказов</span>
+                    <svg width="16" height="16">
+                      <use xlink:href="assets/images/sprite.svg#arrow-down"> </use>
+                    </svg>
+                  </button>
+                  <div class="orders__item order-item mb-30">
+                    <div class="order-item__top">
+                      <div class="order-item__info"><span>Заказ от 3 ноября 2021</span><span class="order-item__small">29837567871</span></div>
+                      <div class="order-item__wrap">
+                        <button class="order-item__btn-cancel">Отменить заказ</button>
+                        <div class="order-item__info"><span>3 000 000 ₽</span><span class="order-item__small">Заказ собирается</span></div>
+                      </div>
+                    </div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">1шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">100шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                  </div>
+                  <div class="orders__item order-item">
+                    <div class="order-item__top">
+                      <div class="order-item__info"><span>Заказ от 3 ноября 2021</span><span class="order-item__small">29837567871</span></div>
+                      <div class="order-item__wrap">
+                        <button class="order-item__btn-cancel">Отменить заказ</button>
+                        <div class="order-item__info"><span>3 000 000 ₽</span><span class="order-item__small">Заказ собирается</span></div>
+                      </div>
+                    </div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">1шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S</span><span class="order-item__quantity order-item__small">100шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                    <div class="order-item__elem"><img class="order-item__img" src="assets/images/whatsminer-m30s.png" alt=""><span class="order-item__name">ASIC BITMAIN ANTMINER S19J PRO 10000 TH/S</span><span class="order-item__quantity order-item__small">10шт</span><span class="order-item__price">1 000 000 ₽</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__col"><a class="footer__logo" href="/">
+                <svg width="140" height="21">
+                  <use xlink:href="assets/images/sprite.svg#logo"></use>
+                </svg></a>
+              <ul class="footer__social social-list">
+                <li class="social-list__item"><a class="social-list__link" href="#">
+                    <svg width="10" height="18">
+                      <use xlink:href="assets/images/sprite.svg#facebook"></use>
+                    </svg></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#">
+                    <svg width="18" height="10">
+                      <use xlink:href="assets/images/sprite.svg#vkontakte"></use>
+                    </svg></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="#">
+                    <svg width="18" height="18">
+                      <use xlink:href="assets/images/sprite.svg#instagram"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Каталог</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">О компании</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Новости</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Услуги</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">FAQ </a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Отзывы</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Производители</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Сравнение</a></li>
+            </ul>
+            <div class="footer__col"><a class="footer__tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
+              <button class="footer__btn btn btn-white" type="button" data-popup-trigger="writeus"><span>Заказать звонок</span></button>
+            </div>
+          </div>
+          <div class="footer__bot">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Пользовательское соглашение</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="modal modal-narrow" data-popup="question">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-30">Задать вопрос</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <form class="modal__form form">
+            <label class="form__item">
+              <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="email" name="email" placeholder="Email">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+            </label>
+            <label class="form__item">
+              <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+            </label>
+            <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+            <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal-narrow" data-popup="writeus">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-30">Написать нам</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <form class="modal__form form">
+            <label class="form__item">
+              <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="email" name="email" placeholder="Email">
+            </label>
+            <label class="form__item">
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+            </label>
+            <label class="form__item">
+              <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+            </label>
+            <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+            <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal-wide" data-popup="ordering-step-1">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-20">Оформление заказа</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <div class="modal__tab-nav">
+              <button class="modal__tab-btn" type="button" data-tab-id="ordering" data-tab-control="new-user">Новый пользователь</button>
+              <button class="modal__tab-btn" type="button" data-tab-id="ordering" data-tab-control="login">Войти в аккаунт</button>
+            </div>
+            <form class="modal__form modal__form--intab form" data-tab-id="ordering" data-tab-block="new-user">
+              <label class="form__item">
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="email" name="email" placeholder="Email">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+              </label>
+              <label class="form__item">
+                <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+              </label>
+              <button class="form__submit-btn btn btn-gradient" type="submit" data-popup-trigger="ordering-step-2"><span>Отправить</span></button>
+              <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+            </form>
+            <form class="modal__form modal__form--intab form" data-tab-id="ordering" data-tab-block="login">
+              <label class="form__item">
+                <input class="form__input" type="tel" name="tel" placeholder="Номер телефона">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="password" name="password" placeholder="Пароль">
+              </label>
+              <button class="form__submit-btn btn btn-gradient" type="submit"><span>Войти</span></button>
+            </form>
+            <div class="modal__side ordering">
+              <div class="ordering__caption">Ваш заказ</div>
+              <div class="ordering__item">
+                <div class="ordering__term">Позиции в заказе:</div>
+                <ul class="ordering__list">
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                </ul>
+              </div>
+              <div class="ordering__item">
+                <div class="ordering__term">Предварительная сумма:</div><span class="ordering__elem">4 000 000 ₽</span>
+              </div>
+              <div class="ordering__bot">Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-wide" data-popup="ordering-step-2">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-20">Оформление заказа</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__content">
+            <div class="modal__tab-nav">
+              <p>Ваши данные для оформления заказа:</p>
+            </div>
+            <form class="modal__form form">
+              <label class="form__item">
+                <input class="form__input" type="text" name="name" value="Иванов Иван" placeholder="Ваше имя">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="email" name="email" value="ivanov@mail.ru" placeholder="Email">
+              </label>
+              <label class="form__item">
+                <input class="form__input" type="tel" name="tel" value="+7 (999) 999-99-99" placeholder="Телефон">
+              </label>
+              <label class="form__item">
+                <textarea class="form__input form__input--comment" name="message" placeholder="Сообщение"></textarea>
+              </label>
+              <button class="form__submit-btn btn btn-gradient" type="submit"><span>Отправить</span></button>
+              <p class="form__note">Нажимая на кнопку Подписаться, вы соглашаетесь с <a href="#">условиями обработки персональных данных</a></p>
+            </form>
+            <div class="modal__side ordering">
+              <div class="ordering__caption">Ваш заказ</div>
+              <div class="ordering__item">
+                <div class="ordering__term">Позиции в заказе:</div>
+                <ul class="ordering__list">
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                  <li class="ordering__elem">ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)</li>
+                </ul>
+              </div>
+              <div class="ordering__item">
+                <div class="ordering__term">Предварительная сумма:</div><span class="ordering__elem">4 000 000 ₽</span>
+              </div>
+              <div class="ordering__bot">Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-narrow modal-small" data-popup="logout">
+        <div class="modal__container">
+          <h2 class="modal__title title-second mb-30">Вы действительно хотите выйти?</h2>
+          <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-popup>
+            <svg width="32" heigh="32">
+              <use xlink:href="assets/images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="modal__btn-wrap">
+            <button class="btn btn-violet"> <span>Отмена</span></button>
+            <button class="btn btn-ghost">Выйти</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-overlay" aria-label="Закрыть окно" data-close-popup></div>
+    </div>
+    <script src="assets/scripts/svg4everybody.min.js"></script>
+    <script src="assets/scripts/imask.min.js"></script>
+    <script src="assets/scripts/accordion.min.js"></script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/spotlight.bundle.js"></script>
+    <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

@@ -85,7 +85,7 @@ html
 								input.form__input(type="tel" name="tel" placeholder="Телефон")
 							label.form__item
 								textarea.form__input.form__input--comment(name="message" placeholder="Сообщение")
-							button.form__submit-btn.btn.btn-gradient(type="submit")
+							button.form__submit-btn.btn.btn-gradient(type="submit" data-popup-trigger="ordering-step-2")
 								span Отправить
 							p.form__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
 								a(href="#") условиями обработки персональных данных
@@ -110,7 +110,52 @@ html
 								span.ordering__elem 4 000 000 ₽
 							.ordering__bot Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки
 
+			.modal.modal-wide(data-popup="ordering-step-2")
+				.modal__container
+					h2.modal__title.title-second.mb-20 Оформление заказа
+					button.modal__close(type="button" aria-label="Закрыть окно" data-close-popup)
+						svg(width="32" heigh="32")
+							use(xlink:href="assets/images/sprite.svg#close")
+					.modal__content
+						.modal__tab-nav
+							p Ваши данные для оформления заказа:
 
+						form.modal__form.form
+							label.form__item
+								input.form__input(type="text" name="name" value="Иванов Иван" placeholder="Ваше имя")
+							label.form__item
+								input.form__input(type="email" name="email" value="ivanov@mail.ru" placeholder="Email")
+							label.form__item
+								input.form__input(type="tel" name="tel" value="+7 (999) 999-99-99" placeholder="Телефон")
+							label.form__item
+								textarea.form__input.form__input--comment(name="message" placeholder="Сообщение")
+							button.form__submit-btn.btn.btn-gradient(type="submit")
+								span Отправить
+							p.form__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
+								a(href="#") условиями обработки персональных данных
+
+						.modal__side.ordering
+							.ordering__caption Ваш заказ
+							.ordering__item
+								.ordering__term Позиции в заказе:
+								ul.ordering__list
+									li.ordering__elem ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)
+									li.ordering__elem ASIC BITMAIN ANTMINER S19J PRO 100 TH/S (1)
+							.ordering__item
+								.ordering__term Предварительная сумма:
+								span.ordering__elem 4 000 000 ₽
+							.ordering__bot Наши менеджеры свяжуться с вами для подтверждения заказа и выбора способа доставки
+
+			.modal.modal-narrow.modal-small(data-popup="logout")
+				.modal__container
+					h2.modal__title.title-second.mb-30 Вы действительно хотите выйти?
+					button.modal__close(type="button" aria-label="Закрыть окно" data-close-popup)
+						svg(width="32" heigh="32")
+							use(xlink:href="assets/images/sprite.svg#close")
+					.modal__btn-wrap
+						button.btn.btn-violet 
+							span Отмена
+						button.btn.btn-ghost Выйти
 
 			.modal-overlay(aria-label="Закрыть окно" data-close-popup)
 

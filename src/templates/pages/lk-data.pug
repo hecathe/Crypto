@@ -1,0 +1,46 @@
+extends ../template
+
+block variables
+    - var title = 'Личные данные'
+
+block content
+    main
+        section.account.mb-100
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Личный кабинет
+
+            .container
+                .account__content
+                    .account__side
+                        ul.account__nav.account-nav
+                            li.account-nav__item
+                                a.account-nav__link.active(href="#") Личные данные
+                            li.account-nav__item
+                                a.account-nav__link(href="#") Мои заказы
+                            li.account-nav__item
+                                a.account-nav__link(href="#") Избранное
+                        button.account__logout(data-popup-trigger="logout") Выйти из личного кабинета
+                    .account__block
+                        form.account__form.form.mb-50(action="#")
+                            label.form__item
+                                input.form__input(type="text" name="name" value="Иванов Иван")
+                            label.form__item
+                                input.form__input(type="email" name="email" value="ivanov@mail.ru")
+                            label.form__item
+                                input.form__input(type="tel" name="tel" value="+7 (999) 999-99-99")
+                            button.account__btn.btn.btn-gradient(type="submit")
+                                span Изменить
+
+                        form.account__form.form(action="#")
+                            fieldset.account__field
+                                legend.account__caption Изменить пароль
+                                label.form__item
+                                    input.form__input(type="password" name="old-password" placeholder="Старый пароль")
+                                label.form__item
+                                    input.form__input(type="password" name="new-password" placeholder="Новый пароль")
+                                label.form__item
+                                    input.form__input(type="password" name="repeat-password" placeholder="Повторите новый пароль")
+                            button.account__btn.btn.btn-gradient(type="submit" disabled)
+                                span Изменить пароль

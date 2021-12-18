@@ -1,0 +1,126 @@
+extends ../template
+
+block variables
+    - var title = 'Личные данные'
+
+block content
+    main
+        section.account.mb-120
+            .heading.pt-100.mb-60
+                .container
+                    include ../components/breadcrumbs.pug
+                    h1.heading__title.title-first Личный кабинет
+
+            .container
+                .account__content
+                    .account__side
+                        ul.account__nav.account-nav
+                            li.account-nav__item
+                                a.account-nav__link(href="#") Личные данные
+                            li.account-nav__item
+                                a.account-nav__link.active(href="#") Мои заказы
+                            li.account-nav__item
+                                a.account-nav__link(href="#") Избранное
+                        button.account__logout(data-popup-trigger="logout") Выйти из личного кабинета
+                    .account__block
+                        .account__orders.orders.mb-60
+                            .orders__caption.mb-20 Текущие заказы
+                            .orders__item.order-item.mb-30
+                                .order-item__top
+                                    .order-item__info
+                                        span Заказ от 3 ноября 2021
+                                        span.order-item__small 29837567871
+                                    .order-item__wrap
+                                        button.order-item__btn-cancel Отменить заказ
+                                        .order-item__info
+                                            span 3 000 000 ₽
+                                            span.order-item__small Заказ собирается
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 1шт
+                                    span.order-item__price 1 000 000 ₽
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 100шт
+                                    span.order-item__price 1 000 000 ₽
+                            
+                            .orders__item.order-item
+                                .order-item__top
+                                    .order-item__info
+                                        span Заказ от 3 ноября 2021
+                                        span.order-item__small 29837567871
+                                    .order-item__wrap
+                                        button.order-item__btn-cancel Отменить заказ
+                                        .order-item__info
+                                            span 3 000 000 ₽
+                                            span.order-item__small Заказ собирается
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 1шт
+                                    span.order-item__price 1 000 000 ₽
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 100шт
+                                    span.order-item__price 1 000 000 ₽
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 10000 TH/S
+                                    span.order-item__quantity.order-item__small 10шт
+                                    span.order-item__price 1 000 000 ₽
+                            
+                        .account__orders.orders
+                            button.orders__caption-btn.mb-30
+                                span История заказов
+                                svg(width="16" height="16")
+                                    use(xlink:href="assets/images/sprite.svg#arrow-down") 
+                            .orders__item.order-item.mb-30
+                                .order-item__top
+                                    .order-item__info
+                                        span Заказ от 3 ноября 2021
+                                        span.order-item__small 29837567871
+                                    .order-item__wrap
+                                        button.order-item__btn-cancel Отменить заказ
+                                        .order-item__info
+                                            span 3 000 000 ₽
+                                            span.order-item__small Заказ собирается
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 1шт
+                                    span.order-item__price 1 000 000 ₽
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 100шт
+                                    span.order-item__price 1 000 000 ₽
+                            
+                            .orders__item.order-item
+                                .order-item__top
+                                    .order-item__info
+                                        span Заказ от 3 ноября 2021
+                                        span.order-item__small 29837567871
+                                    .order-item__wrap
+                                        button.order-item__btn-cancel Отменить заказ
+                                        .order-item__info
+                                            span 3 000 000 ₽
+                                            span.order-item__small Заказ собирается
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 1шт
+                                    span.order-item__price 1 000 000 ₽
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 100 TH/S
+                                    span.order-item__quantity.order-item__small 100шт
+                                    span.order-item__price 1 000 000 ₽
+                                .order-item__elem
+                                    img.order-item__img(src="assets/images/whatsminer-m30s.png", alt="")
+                                    span.order-item__name ASIC BITMAIN ANTMINER S19J PRO 10000 TH/S
+                                    span.order-item__quantity.order-item__small 10шт
+                                    span.order-item__price 1 000 000 ₽
+                            

@@ -46,4 +46,17 @@
             }
         }
     }
+
+    &__btn-wrap {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+        margin-top: 40px;
+
+        a {
+            background: $color-main-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }

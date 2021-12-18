@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+
+block content
+    main
+        // Регистрация
+        section.registration.pt-100.mb-120
+            .container
+                .registration__content
+                    h1.registration__title.title-first.mb-40 Вы успешно зарегистрировались
+                    img.registration__img(src="assets/images/lk-back.png", alt="")
+                    p Осталось подтвердить регистрацию. Письмо с ссылкой на подтверждение придет на ваш e-mail в течение 5 минут. Просто перейдите по ссылке и завершите регистрацию.
+                    
+                    .registration__link 
+                        span Письмо не пришло?
+                        a(href="#") Выслать еще раз

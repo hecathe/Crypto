@@ -1,0 +1,32 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+
+block content
+    main
+        // Регистрация
+        section.registration.pt-100.mb-120
+            .container
+                .registration__content
+                    h1.registration__title.title-first.mb-40 Регистрация
+                    img.registration__img(src="assets/images/lk-back.png", alt="")
+                    form.registration__form.form(action="#")
+                        label.form__item
+                            input.form__input(type="text" name="name" placeholder="Ваше имя")
+                        label.form__item
+                            input.form__input(type="email" name="email" placeholder="Email")
+                        label.form__item
+                            input.form__input(type="tel" name="tel" placeholder="Телефон")
+                        label.form__item
+                            input.form__input(type="password" name="password" placeholder="Пароль")
+                        label.form__item
+                            input.form__input(type="password" name="repeat-password" placeholder="Повторите пароль")
+                        button.form__submit-btn.btn.btn-gradient(type="submit")
+                            span Зарегистрироваться
+                        p.form__note Нажимая на кнопку Подписаться, вы соглашаетесь с 
+                            a(href="#") условиями обработки персональных данных
+                    
+                    .registration__link 
+                        span У вас уже есть аккаунт?
+                        a(href="#") Войти

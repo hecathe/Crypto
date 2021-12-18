@@ -1,0 +1,26 @@
+extends ../template
+
+block variables
+    - var title = 'Вход'
+
+block content
+    main
+        // Вход
+        section.login.pt-100.mb-120
+            .container
+                .login__content
+                    h1.login__title.title-first.mb-40 Вход
+                    img.login__img(src="assets/images/lk-back.png", alt="")
+                    form.login__form.form(action="#")
+                        label.form__item
+                            input.form__input(type="tel" name="tel" placeholder="Ваш телефон")
+                        label.form__item
+                            input.form__input(type="password" name="password" placeholder="Пароль")
+                        .form__btn-wrap
+                            button.form__submit-btn.btn.btn-gradient(type="submit")
+                                span Войти
+                            a(href="#") Забыл пароль
+                    
+                    .login__link 
+                        span Нет аккаунта?
+                        a(href="#") Зарегистрироваться
