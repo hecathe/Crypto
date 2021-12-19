@@ -1,4 +1,5 @@
 .main-screen {
+    position: relative;
     min-height: 900px;
     height: 100vh;
     // background-image: url('../images/svg/ms-back.svg');
@@ -6,6 +7,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top;
+    overflow-x: hidden;
 
     .container {
         position: relative;
@@ -13,8 +15,40 @@
         padding-top: 92px;
     }
 
+    &__img {
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__img--1 {
+        top: 116px;
+        right: 29%;
+    }
+
+    &__img--2 {
+        top: 82px;
+        left: 27%;
+    }
+
+    &__img--3 {
+        top: 131px;
+        left: 3%;
+    }
+
+    &__img--4 {
+        bottom: 240px;
+        left: 27%;
+    }
+
+    &__img--5 {
+        top: 158px;
+        right: 4%;
+    }
+
     &__text-wrap {
+        position: relative;
         max-width: 675px;
+        z-index: 2;
     }
 
     &__title {
@@ -69,6 +103,7 @@
 
         img {
             max-width: 290px;
+            width: 100%;
             max-height: 290px;
             object-fit: contain;
             margin-bottom: 20px;
@@ -149,6 +184,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
+    overflow-x: hidden;
 
     .container {
         display: grid;
@@ -270,12 +306,12 @@
     &__grid {
         display: grid;
         grid-template-columns: 1fr minmax(auto, 500px);
-        grid-auto-rows: 215px;
         column-gap: 30px;
         row-gap: 30px;
     }
 
     &__item {
+        min-height: 215px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -343,5 +379,179 @@
         line-height: 20px;
         color: $color-grey2;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .main-screen {
+        &__title {
+            font-size: 46px;
+            line-height: 54px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .main-screen {
+        min-height: 700px;
+        background-image: url('../images/ms-back-mobile.png');
+        background-size: cover;
+        
+        .container {
+            padding-top: 30px;
+        }
+
+        &__img--1 {
+            width: 46px;
+            top: 230px;
+            right: 44px;
+        }
+
+        &__img--2 {
+            width: 45px;
+            top: 55px;
+            left: 59%;
+        }
+
+        &__img--3 {
+            width: 42px;
+            top: initial;
+            left: 3%;
+            bottom: 188px;
+        }
+
+        &__img--4 {
+            width: 43px;
+            bottom: 40px;
+            left: 32%;
+        }
+
+        &__img--5 {
+            width: 55px;
+            top: 122px;
+            right: -5%;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        &__block {
+            width: 365px;
+            height: 436px;
+            right: -35px;
+            bottom: 85px;
+        }
+
+        &__bot {
+            width: 458px;
+            height: 217px;
+            right: initial;
+            left: 23px;
+            bottom: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-producers {
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+
+    .cards-list {
+        &_col-3 {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+
+        &__link {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .catalog-slider {
+        margin-bottom: 80px;
+
+        &__title-wrap {
+            margin-bottom: 30px;
+        }
+
+        &__slider {
+            .swiper-button {
+                display: none;
+            }
+        }
+    }
+
+    .main-about {
+        .container {
+            grid-template-columns: 1fr;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__img, &__img-wave {
+            display: none;
+        }
+
+        &__btn {
+            width: 100%;
+            padding: 15px;
+        }
+    }
+    .static-list {
+        column-gap: 35px;
+        margin-top: 36px;
+
+        &__term {
+            font-size: 60px;
+            line-height: 73px;
+        }
+    }
+
+    .partners {
+        &__title {
+            margin-bottom: 50px;
+        }
+
+        &__slider {
+            // .swiper-container {
+            //     overflow: visible;
+            // }
+
+            .swiper-button {
+                display: none;
+            }
+        }
+    }
+
+    .main-news {
+        .container {
+            padding-top: 80px;
+        }
+
+        .title-wb {
+            margin-bottom: 40px;
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+
+        &__item--big {
+            grid-row: initial;
+            padding: 20px;
+            padding-top: 40px;
+        }
     }
 }

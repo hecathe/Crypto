@@ -34,3 +34,24 @@
         margin-bottom: 60px;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .news-item {
+        &__caption {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+
+        &__img {
+            margin-bottom: 30px;
+        }
+    }
+
+    .news-slider {
+        &__title-wrap {
+            margin-bottom: 40px;
+        }
+    }
+}

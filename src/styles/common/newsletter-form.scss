@@ -21,3 +21,18 @@
         z-index: 1;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .newsletter {
+        min-height: auto;
+
+        .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}

@@ -7,3 +7,20 @@
         @include list-reset;
     }
 }
+
+@media screen and (max-width: 1023px) {
+    .news {
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .news {
+        &__grid {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+}

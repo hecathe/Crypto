@@ -75,3 +75,28 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .faq {
+        &__wrap {
+            grid-template-columns: 100%;
+            row-gap: 80px;
+        }
+
+        &__side {
+            position: static;
+        }
+    }
+
+    .accordion {
+        .ac-trigger {
+            padding: 15px 20px;
+
+            span {
+                max-width: 250px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}

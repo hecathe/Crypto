@@ -51,6 +51,8 @@
 }
 
 .reviews-item {
+    display: flex;
+    flex-direction: column;
     background: $color-white;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -63,6 +65,7 @@
     }
 
     &__link {
+        display: flex;
         color: $color-main;
     }
 
@@ -85,5 +88,20 @@
         grid-auto-columns: 80px;
         column-gap: 10px;
         height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .reviews-item {
+        min-height: 380px;
+
+        &__link {
+            margin-top: 20px;
+        }
+
+        &__bot {
+            margin-top: auto;
+        }
     }
 }

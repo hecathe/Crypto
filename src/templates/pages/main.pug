@@ -7,6 +7,12 @@ block content
     main
         // Главный экран
         section.main-screen.pt-100
+            .main-screen__imgs
+                    img.main-screen__img.main-screen__img--1(src="assets/images/Group.png", alt="")
+                    img.main-screen__img.main-screen__img--2(src="assets/images/Group-1.png", alt="")
+                    img.main-screen__img.main-screen__img--3(src="assets/images/Group-2.png", alt="")
+                    img.main-screen__img.main-screen__img--4(src="assets/images/Group-3.png", alt="")
+                    img.main-screen__img.main-screen__img--5(src="assets/images/Group-4.png", alt="")
             .container
                 .main-screen__text-wrap
                     h1.main-screen__title Продажа оборудования для майнинга
@@ -161,7 +167,7 @@ block content
                         img(src="assets/images/mnews-3.png", alt="")
                         .main-news__text-wrap
                             time.main-news__time(datetime="2021-10-30") 30.10.2021
-                            p.main-news__text Забытый Bitcoin-кошелёк неожиданно «ожил» впервые с 2010 года — за это время его содержимое подорожало в 750 тыс. раз
+                            p.main-news__text Курс биткоина рухнул
 
         // About text
         include ../components/about-block.pug 

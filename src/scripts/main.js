@@ -130,8 +130,25 @@ const catalogSliderOnMain = new Swiper(
     ".catalog-slider__slider .swiper-container",
     {
         // Optional parameters
-        slidesPerView: 4,
-        spaceBetween: 30,
+        // slidesPerView: 4,
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+            // 500: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20,
+            // },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
 
         // Navigation arrows
         navigation: {
@@ -150,8 +167,22 @@ const catalogSliderOnMain = new Swiper(
 //news slider
 const newsSlider = new Swiper(".news-slider__slider .swiper-container", {
     // Optional parameters
-    slidesPerView: 3,
-    spaceBetween: 30,
+    // slidesPerView: 3,
+    // spaceBetween: 30,
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
 
     // Navigation arrows
     navigation: {
@@ -169,9 +200,24 @@ const newsSlider = new Swiper(".news-slider__slider .swiper-container", {
 //partners
 const partnersSlider = new Swiper(".partners__slider .swiper-container", {
     // Optional parameters
-    slidesPerView: 6,
-    spaceBetween: 43,
+    // slidesPerView: 6,
+    // spaceBetween: 43,
     loop: true,
+
+    breakpoints: {
+        0: {
+            slidesPerView: 2.2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4.1,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 6,
+            spaceBetween: 43,
+        }
+    },
 
     // Navigation arrows
     navigation: {
@@ -206,8 +252,19 @@ const sliderCatalogCard = new Swiper(".swiper-w-thumbs .swiper-view", {
 
 // reviews slider
 const reviewSlider = new Swiper(".reviews-slider .swiper-container", {
-    slidesPerView: 2,
-    spaceBetween: 25,
+    // slidesPerView: 2,
+    // spaceBetween: 25,
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+    },
 
     // Navigation arrows
     navigation: {

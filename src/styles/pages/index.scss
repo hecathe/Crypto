@@ -22,3 +22,15 @@
         }
     }
 }
+
+@media screen and (max-width: 1023px) {
+    .site-map {
+        height: auto;
+        padding: 30px 0;
+
+        &__row {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

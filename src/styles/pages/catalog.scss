@@ -69,3 +69,28 @@
     row-gap: 50px;
     @include list-reset;
 }
+
+@media screen and (max-width: 767px) {
+    .heading {
+        .container {
+            padding-top: 30px;
+        }
+    }
+
+    .catalog {
+        &__sort {
+            overflow-x: auto;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .pagination {
+        margin-top: 60px;
+    }
+}

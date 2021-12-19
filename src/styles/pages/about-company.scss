@@ -37,3 +37,28 @@
         margin-top: 50px;
     }
 }
+
+@media screen and (max-width: 1023px) {
+    .about-company {
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+        &__block {
+            padding: 40px 20px 320px;
+        }
+
+        &__img {
+            width: 335px;
+            height: 463px;
+            right: -54px;
+            bottom: -35px;
+        }
+
+        &__static {
+            margin-top: 40px;
+        }
+    }
+}
