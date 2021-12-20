@@ -25,14 +25,31 @@
 .payment-list {
     width: max-content;
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(4, max-content);
     align-items: center;
     align-content: center;
     column-gap: 50px;
     row-gap: 20px;
     @include list-reset;
+}
 
-    &:first-of-type {
-        grid-template-columns: repeat(4, max-content);
+@media screen and (max-width: 975px) {
+    .shipping {
+        margin-bottom: 80px;
+
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .payment {
+        &__block {
+            grid-template-columns: 100%;
+            row-gap: 60px;
+        }
+    }
+
+    .payment-list {
+        grid-template-columns: repeat(2, max-content);
     }
 }

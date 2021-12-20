@@ -10,6 +10,11 @@
         column-gap: 30px;
     }
 
+    &__side {
+        position: sticky;
+        top: 20px;
+    }
+
     &__logout {
         width: 100%;
         color: #A1A1A1;
@@ -175,4 +180,114 @@
     column-gap: 20px;
     row-gap: 20px;
     @include list-reset;
+}
+
+@media screen and (max-width: 1023px) {
+    .fav-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .account {
+        &__content {
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+
+        &__side {
+            position: static;
+            display: flex;
+            column-gap: 20px;
+            overflow-x: auto;
+            margin: 0 -20px;
+            padding: 0 20px 5px;
+        }
+
+        &__form {
+            max-width: 100%;
+            margin-bottom: 60px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &__logout {
+            width: auto;
+            white-space: nowrap;
+            margin-top: 0;
+            padding: 10px 20px;
+        }
+    }
+
+    .account-nav {
+        display: flex;
+        column-gap: 20px;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+
+        &__item {
+            border: none;
+        }
+
+        &__link {
+            white-space: nowrap;
+            border-radius: 40px;
+            padding: 10px 20px;
+
+            &.active {
+                color: $color-white;
+                background-color: $color-main;
+            }
+        }
+    }
+
+    .order-item {
+        padding: 30px 20px;
+
+        &__top {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 10px;
+        }
+
+        &__wrap {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .order-item__info {
+                justify-items: flex-start;
+            }
+        }
+
+        &__elem {
+            display: grid;
+            grid-template-columns: max-content 1fr 1fr;
+            row-gap: 10px;
+        }
+
+        &__img {
+            grid-row: 1 / span 2;
+        }
+
+        &__name {
+            width: 100%;
+            grid-column: 2 / -1;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fav-list {
+        grid-template-columns: 1fr;
+    }
 }

@@ -36,3 +36,21 @@
         margin-top: auto;
     }
 }
+
+@media screen and (max-width: 975px) {
+    .features-card {
+        padding: 30px 20px;
+
+        &__icon {
+            margin-bottom: 20px;
+        }
+
+        &__caption {
+            margin-bottom: 10px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

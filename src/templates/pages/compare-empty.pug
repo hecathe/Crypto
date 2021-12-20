@@ -14,14 +14,13 @@ block content
 
             .container
                 .compare__block.block
+                    svg.block__img(width="364" height="300")
+                        use(xlink:href="assets/images/sprite.svg#compare")
                     .block__top.block__top--mw-520
                         h3.block__title.title-third.mb-30 Список сравнения пуст
                         p Добавляйте сюда товары, чтобы сравнить их характеристики. Так выбрать лучший станет проще!
                         a.block__btn.btn.btn-gradient(href="#")
                             span Перейти в каталог
-                        
-                    svg.block__img(width="364" height="300")
-                        use(xlink:href="assets/images/sprite.svg#compare")
 
         // Блок-подбор
         include ../components/assort-block.pug

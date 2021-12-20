@@ -7,11 +7,17 @@
     background: $color-main-back;
 
     &__content {
+        position: relative;
         max-width: 480px;
         margin-left: auto;
         margin-right: 105px;
         margin-top: 60px;
         color: $color-white;
+        z-index: 1;
+    }
+
+    &__title {
+        font-weight: 500;
     }
 
     &__img {
@@ -54,6 +60,37 @@
             background: $color-main-gradient;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .login {
+        // min-height: auto;
+        overflow: hidden;
+
+        &__content {
+            max-width: 100%;
+            margin: 0;
+            margin-top: 40px;
+        }
+
+        &__img {
+            max-width: max-content;
+            width: 1150px;
+            transform: translate(-55%, 51%);
+        }
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__form .form__submit-btn {
+            width: 100%;
+        }
+
+        &__link {
+            margin-top: 30px;
         }
     }
 }

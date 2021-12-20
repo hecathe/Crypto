@@ -80,3 +80,36 @@
         }
     }
 }
+
+@media screen and (max-width: 975px) {
+    .services-item {
+        &__container {
+            grid-template-columns: 1fr;
+            row-gap: 80px;
+        }
+
+        &__block {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__banner {
+            img {
+                height: 270px;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    .nav-side {
+        position: static;
+        padding: 10px 20px;
+    }
+}

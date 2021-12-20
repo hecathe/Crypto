@@ -7,3 +7,11 @@
         @include list-reset;
     }
 }
+
+@media screen and (max-width: 975px) {
+    .services {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+}
