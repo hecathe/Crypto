@@ -88,6 +88,8 @@
         row-gap: 5px;
 
         span {
+            display: flex;
+            align-items: center;
             font-weight: 600;
             font-size: 12px;
             line-height: 15px;

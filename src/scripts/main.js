@@ -308,6 +308,13 @@ modalTriggers.forEach((modalTrigger) => {
             if (modal.classList.contains(activeClass)) {
                 closePopup(modal);
             }
+
+            modal.onscroll = function () {
+                modal.style.transform = 'translateY(0)'
+                if (modal.scrollTop === 0) {
+                    modal.style.transform = "translateY(10%)";
+                }
+            }
         })
     });
 });
@@ -319,13 +326,15 @@ function openPopup(elem) {
 }
 
 function closePopup(elem) {
-    const closePopupBtn = elem.querySelector("[data-close-popup]");
+    const closePopupBtns = elem.querySelectorAll("[data-close-popup]");
 
-    closePopupBtn.addEventListener("click", function () {
-        elem.classList.remove(activeClass);
-        overlay.classList.remove(activeClass);
-        body.removeAttribute("style");
-    });
+    closePopupBtns.forEach(closeBtn => {
+        closeBtn.addEventListener("click", function () {
+            elem.classList.remove(activeClass);
+            overlay.classList.remove(activeClass);
+            body.removeAttribute("style");
+        });
+    })
 
     overlay.addEventListener("click", function () {
         elem.classList.remove(activeClass);
